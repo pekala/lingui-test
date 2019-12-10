@@ -1,2 +1,4 @@
 node_modules
 dist/bundle.js
+src/locales/_build
+src/locales/**/messages.js
