@@ -13,7 +13,7 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.js:57
+#: src/App.js:58
 msgid "Crazy Nic!!"
 msgstr "Crazy Nic!!"
 
@@ -21,7 +21,11 @@ msgstr "Crazy Nic!!"
 msgid "Hello sir"
 msgstr "Hello sir"
 
-#: src/App.js:63
+#: src/App.js:35
+msgid "Kiko kiko"
+msgstr "Kiko kiko"
+
+#: src/App.js:64
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Last time I had to configure webpack {0,date}"
 
@@ -69,6 +73,6 @@ msgstr "This time it should work now go kola"
 msgid "my.custom.id"
 msgstr "Custom ID works"
 
-#: src/App.js:37
+#: src/App.js:38
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"

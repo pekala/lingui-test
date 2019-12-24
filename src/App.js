@@ -32,6 +32,7 @@ const App = () => {
         <Trans>Next text</Trans>
         <Trans>This time it should work now go kola</Trans>
         <Trans>This hikolp 12312</Trans>
+        <Trans>Kiko kiko</Trans>
       </h1>
       <p>
         <Plural
