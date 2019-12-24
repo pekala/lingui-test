@@ -33,4 +33,4 @@ jobs:
           platform: web # or android, ios, other
 
           # The filename new keys should be attached to
-          filename: %LANG_ISO%/messages.po
+          filename: messages.po
