@@ -31,6 +31,7 @@ const App = () => {
       <h1>
         <Trans>Next text</Trans>
         <Trans>This time it should work</Trans>
+        <Trans>This hikolp</Trans>
       </h1>
       <p>
         <Plural
