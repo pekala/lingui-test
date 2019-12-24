@@ -19,6 +19,9 @@ const App = () => {
       <h1>
         <Trans id="my.custom.id">Custom ID works</Trans>
       </h1>
+      <h1>
+        <Trans>Let's go</Trans>
+      </h1>
       <p>
         <Plural
           value={count}
