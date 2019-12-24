@@ -13,11 +13,15 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/App.js:46
+#: src/App.js:49
 msgid "Crazy Nic!!"
 msgstr "Szalony Nik!!"
 
-#: src/App.js:52
+#: src/App.js:26
+msgid "Hello sir"
+msgstr ""
+
+#: src/App.js:55
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Cośtam cośtam, data: {0,date}"
 
@@ -37,6 +41,6 @@ msgstr ""
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:26
+#: src/App.js:29
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"
