@@ -30,6 +30,7 @@ const App = () => {
       </h1>
       <h1>
         <Trans>Next text</Trans>
+        <Trans>This time it should work</Trans>
       </h1>
       <p>
         <Plural
