@@ -38,7 +38,11 @@ msgid "Next text"
 msgstr ""
 
 #: src/App.js:34
-msgid "This hikolp"
+#~ msgid "This hikolp"
+#~ msgstr ""
+
+#: src/App.js:34
+msgid "This hikolp 12312"
 msgstr ""
 
 #: src/App.js:14

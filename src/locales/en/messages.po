@@ -38,8 +38,12 @@ msgid "Next text"
 msgstr "Next text"
 
 #: src/App.js:34
-msgid "This hikolp"
-msgstr "This hikolp"
+#~ msgid "This hikolp"
+#~ msgstr "This hikolp"
+
+#: src/App.js:34
+msgid "This hikolp 12312"
+msgstr "This hikolp 12312"
 
 #: src/App.js:14
 msgid "This message is translated and has a <0>link</0>"
