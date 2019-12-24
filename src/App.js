@@ -28,6 +28,9 @@ const App = () => {
       <h1>
         <Trans>New text</Trans>
       </h1>
+      <h1>
+        <Trans>This time it should work</Trans>
+      </h1>
       <p>
         <Plural
           value={count}
