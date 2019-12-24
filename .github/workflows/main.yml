@@ -7,7 +7,7 @@ on:
       - master
     # Only run workflow when matching files are changed
     paths:
-     - 'src/locales/*/messages.po'
+      - "src/locales/*/messages.po"
 
 jobs:
   upload:
@@ -24,7 +24,7 @@ jobs:
           project-id: 226204445dcaa59581a7b0.23094960
 
           # The relative directory where language files will be found
-          directory: src/locales/*
+          directory: src/locales/%LANG_ISO%
 
           # Which format to parse (json or properties)
           format: po
