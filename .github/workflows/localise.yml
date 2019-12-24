@@ -1,4 +1,4 @@
-name: Push keys to Lokalise 2
+name: Push keys to Lokalise 3
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: dmmikkel/lokalise-key-push@v3.4
+      - uses: action.yml
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
