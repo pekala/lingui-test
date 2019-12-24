@@ -50,8 +50,12 @@ msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr "This message will fallback to {fallbackLang} / {count}!"
 
 #: src/App.js:33
-msgid "This time it should work"
-msgstr "This time it should work"
+#~ msgid "This time it should work"
+#~ msgstr "This time it should work"
+
+#: src/App.js:33
+msgid "This time it should work now go"
+msgstr "This time it should work now go"
 
 #: src/App.js:20
 msgid "my.custom.id"

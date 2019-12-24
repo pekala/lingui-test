@@ -50,7 +50,11 @@ msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 
 #: src/App.js:33
-msgid "This time it should work"
+#~ msgid "This time it should work"
+#~ msgstr ""
+
+#: src/App.js:33
+msgid "This time it should work now go"
 msgstr ""
 
 #: src/App.js:20
