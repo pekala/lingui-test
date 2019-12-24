@@ -30,7 +30,7 @@ const App = () => {
       </h1>
       <h1>
         <Trans>Next text</Trans>
-        <Trans>This time it should work now go</Trans>
+        <Trans>This time it should work now go kola</Trans>
         <Trans>This hikolp</Trans>
       </h1>
       <p>
