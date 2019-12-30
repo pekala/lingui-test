@@ -24,6 +24,7 @@ const App = () => {
         <Trans>Make no push</Trans>
         <Trans>Okey Google</Trans>
         <Trans>Go go go</Trans>
+        <Trans>13 Nice</Trans>
       </h1>
       <h1>
         <Trans>Hello sir</Trans>
