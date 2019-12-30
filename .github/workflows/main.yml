@@ -1,4 +1,4 @@
-name: Push keys to Lokalise 3
+name: Push keys to Lokalise
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - uses: igorDolzh/lokalise-file-push@0.0.2
+      - uses: igorDolzh/lokalise-file-push@0.0.3
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -24,13 +24,4 @@ jobs:
           project-id: 226204445dcaa59581a7b0.23094960
 
           # The relative directory where language files will be found
-          directory: /src/locales
-
-          # Which format to parse (json or properties)
-          format: po
-
-          # Which platform to push new keys to
-          platform: web # or android, ios, other
-
-          # The filename new keys should be attached to
-          filename: /%LANG_ISO%/messages.po
+          file-path: src/locales/%LANG_ISO%/messages.po
