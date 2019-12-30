@@ -25,6 +25,7 @@ const App = () => {
         <Trans>Okey Google</Trans>
         <Trans>Go go go</Trans>
         <Trans>13 Nice</Trans>
+        <Trans>Buffer</Trans>
       </h1>
       <h1>
         <Trans>Hello sir</Trans>

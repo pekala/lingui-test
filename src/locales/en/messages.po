@@ -17,11 +17,15 @@ msgstr ""
 msgid "13 Nice"
 msgstr "13 Nice"
 
-#: src/App.js:64
+#: src/App.js:28
+msgid "Buffer"
+msgstr "Buffer"
+
+#: src/App.js:65
 msgid "Crazy Nic!!"
 msgstr "Crazy Nic!!"
 
-#: src/App.js:41
+#: src/App.js:42
 msgid "Fire me"
 msgstr "Fire me"
 
@@ -29,19 +33,19 @@ msgstr "Fire me"
 msgid "Go go go"
 msgstr "Go go go"
 
-#: src/App.js:40
+#: src/App.js:41
 msgid "Google me"
 msgstr "Google me"
 
-#: src/App.js:30
+#: src/App.js:31
 msgid "Hello sir"
 msgstr "Hello sir"
 
-#: src/App.js:39
+#: src/App.js:40
 msgid "Kiko kiko"
 msgstr "Kiko kiko"
 
-#: src/App.js:70
+#: src/App.js:71
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Last time I had to configure webpack {0,date}"
 
@@ -53,11 +57,11 @@ msgstr "Let's go"
 msgid "Make no push"
 msgstr "Make no push"
 
-#: src/App.js:33
+#: src/App.js:34
 msgid "New text"
 msgstr "New text"
 
-#: src/App.js:36
+#: src/App.js:37
 msgid "Next text"
 msgstr "Next text"
 
@@ -69,7 +73,7 @@ msgstr "Okey Google"
 #~ msgid "This hikolp"
 #~ msgstr "This hikolp"
 
-#: src/App.js:38
+#: src/App.js:39
 msgid "This hikolp 12312"
 msgstr "This hikolp 12312"
 
@@ -89,7 +93,7 @@ msgstr "This message will fallback to {fallbackLang} / {count}!"
 #~ msgid "This time it should work now go"
 #~ msgstr "This time it should work now go"
 
-#: src/App.js:37
+#: src/App.js:38
 msgid "This time it should work now go kola"
 msgstr "This time it should work now go kola"
 
@@ -97,6 +101,6 @@ msgstr "This time it should work now go kola"
 msgid "my.custom.id"
 msgstr "Custom ID works"
 
-#: src/App.js:44
+#: src/App.js:45
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
