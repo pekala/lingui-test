@@ -18,7 +18,11 @@ msgid "13 Nice"
 msgstr ""
 
 #: src/App.js:28
-msgid "Buffer"
+#~ msgid "Buffer"
+#~ msgstr ""
+
+#: src/App.js:28
+msgid "Buffer zone"
 msgstr ""
 
 #: src/App.js:65
