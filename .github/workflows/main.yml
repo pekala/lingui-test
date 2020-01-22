@@ -55,7 +55,7 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Check for updates
-        run: git status --porcelain | grep . && ::set-env name=NEW_LOCALES::true || name=NEW_LOCALES::false
+        run: git status --porcelain | grep . && echo ::set-env name=NEW_LOCALES::true || echo ::set-env name=NEW_LOCALES::false
       - name: Commiting locales
         if: $NEW_LOCALES == true
         run: |
