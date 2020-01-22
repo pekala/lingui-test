@@ -57,16 +57,15 @@ jobs:
       - name: Checking for new messages
         run: git status --porcelain | grep . && exit 1 || exit 0
       - name: Commiting messages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         if: failure()
         run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales update"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git remote set-url --push origin https://igorDolzh:$GITHUB_TOKEN@github.com/igorDolzh/lingui-test
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
