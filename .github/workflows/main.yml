@@ -67,7 +67,7 @@ jobs:
           git commit -m "Locales updat5"
           git remote rm origin
           git remote add origin https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test
-          git push --set-upstream origin kek4
+          git push --set-upstream origin master
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
