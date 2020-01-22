@@ -65,9 +65,7 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales updat5"
-          git remote rm origin
-          git remote add origin https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test
-          git push --set-upstream origin kek4
+          git push "${https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test}" HEAD:kek4
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
