@@ -3,8 +3,8 @@ name: Push keys to Lokalise
 on:
   push:
     # Only run workflow for pushes to specific branches
-    branches:
-      - master
+    # branches:
+    #   - master
     # Only run workflow when matching files are changed
     # paths:
     # - "src/locales/*/messages.po"
@@ -55,4 +55,4 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Commiting locales
-        run: git status --porcelain | grep . && git config user.email "developer@pleo.io" && git config user.name "Lingui police" && git add . && git commit -m "Locales update" && exit 0 || exit 0
+        run: git status --porcelain | grep . && git config user.email "developer@pleo.io" && git config user.name "Lingui police" && git add . && git commit -m "Locales update" && git push && exit 0 || exit 0
