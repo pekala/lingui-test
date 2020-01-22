@@ -55,10 +55,13 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Commiting locales
-        if: git status --porcelain | grep .
         run: |
+          git status --porcelain | grep .
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
           git add .
           git commit -m "Locales update"
           git push
+      - name: My backup step
+        if: failure()
+        run: exit 0
