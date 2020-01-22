@@ -54,14 +54,10 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_REGISTRY_TOKEN }}
       - name: Extracting messages
         run: yarn extract
-      - name: Check for updates
-        run: git status --porcelain | grep . && ::set-env name=NEW_LOCALES::true || ::set-env name=NEW_LOCALES::false
       - name: Commiting locales
-        if: success()
-        run: |
-          $NEW_LOCALES == true
-          git config --global user.email "developer@pleo.io"
-          git config --global user.name "Lingui police"
-          git add .
-          git commit -m "Locales update"
-          git push
+        run: git status --porcelain | grep . 
+        git config --global user.email "developer@pleo.io"
+        git config --global user.name "Lingui police"
+        git add .
+        git commit -m "Locales update"
+        git push || exit 0
