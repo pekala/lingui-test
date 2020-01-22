@@ -54,14 +54,16 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_REGISTRY_TOKEN }}
       - name: Extracting messages
         run: yarn extract
+      - name: Check for updates
+        run: git status --porcelain | grep . && exit 0 || exit 0
       - name: Commiting locales
-        run: |
-          git status --porcelain | grep .
-          git config --global user.email "developer@pleo.io"
-          git config --global user.name "Lingui police"
-          git add .
-          git commit -m "Locales update"
-          git push
-      - name: My backup step
+          if: success()
+          run: |
+            git config --global user.email "developer@pleo.io"
+            git config --global user.name "Lingui police"
+            git add .
+            git commit -m "Locales update"
+            git push
+      - name: If no files cound
         if: failure()
         run: exit 0
