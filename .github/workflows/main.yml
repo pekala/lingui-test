@@ -64,9 +64,8 @@ jobs:
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
-          git commit -m "Locales updat1"
-          git push --force
-        # git remote set-url --push origin https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test
+          git commit -m "Locales updat5"
+          # git remote set-url --push origin https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
