@@ -57,7 +57,7 @@ jobs:
       - name: Check for updates
         run: git status --porcelain | grep . && ::set-env name=NEW_LOCALES::true || name=NEW_LOCALES::false
       - name: Commiting locales
-        if: NEW_LOCALES == true
+        if: $NEW_LOCALES == true
         run: |
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
