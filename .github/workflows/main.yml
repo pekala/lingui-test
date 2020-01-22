@@ -1,7 +1,7 @@
 name: Push keys to Lokalise
 
 on:
-  [push, status]
+  [push, *]
   # Only run workflow for pushes to specific branches
   # branches:
   #   - master
