@@ -65,7 +65,7 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales updat6"
-          git push https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test HEAD:kek4
+          git push https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test HEAD:"${GITHUB_REF:11}"
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
