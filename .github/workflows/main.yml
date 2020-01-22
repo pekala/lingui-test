@@ -75,7 +75,7 @@ jobs:
       - name: Commiting messages
         if: failure()
         run: |
-          git config --global user.email "igor.techweb@gmail.com
+          git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales update"
