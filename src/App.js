@@ -25,6 +25,7 @@ const App = () => {
         <Trans>Okey Google</Trans>
         <Trans>Go gore go</Trans>
         <Trans>Go go43re go</Trans>
+        <Trans>Go hello go</Trans>
         <Trans>13 Nice</Trans>
         <Trans>Buffer zone</Trans>
         <Trans>Buffer zone111</Trans>
