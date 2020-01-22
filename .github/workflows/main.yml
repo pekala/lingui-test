@@ -64,8 +64,8 @@ jobs:
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
-          git commit -m "Locales updat5"
-          git push https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test HEAD:kek4
+          git commit -m "Locales updat6"
+          git push https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
