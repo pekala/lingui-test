@@ -10,21 +10,21 @@ on:
     # - "src/locales/*/messages.po"
 
 jobs:
-  upload:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: igorDolzh/lokalise-file-push@0.0.6
-        with:
-          # Api token for the Lokalise account
-          # with read/write access to the project
-          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+  #upload:
+  # runs-on: ubuntu-latest
+  # steps:
+  #   - uses: actions/checkout@v1
+  #   - uses: igorDolzh/lokalise-file-push@0.0.6
+  #     with:
+  #       # Api token for the Lokalise account
+  #       # with read/write access to the project
+  #       api-token: ${{ secrets.LOCALIZE_TOKEN }}
 
-          # ID of the project to sync
-          project-id: 384372155e0a066e6ef735.76487515
+  #       # ID of the project to sync
+  #       project-id: 384372155e0a066e6ef735.76487515
 
-          # The relative directory where language files will be found
-          file-path: src/locales/%LANG_ISO%/messages.po
+  #       # The relative directory where language files will be found
+  #       file-path: src/locales/%LANG_ISO%/messages.po
 
   lint:
     name: LinguiJs test
@@ -56,9 +56,9 @@ jobs:
         run: yarn extract
       - name: Commiting locales
         run: |
-          git status --porcelain | grep . 
+          git status --porcelain | grep . || exit 0
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
           git add .
           git commit -m "Locales update"
-          git push || exit 0
+          git push
