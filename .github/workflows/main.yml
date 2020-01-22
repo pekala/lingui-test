@@ -59,7 +59,7 @@ jobs:
       - name: Commiting locales
         if: success()
         run: |
-          $NEW_LOCALES == true
+          NEW_LOCALES == true
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
           git add .
