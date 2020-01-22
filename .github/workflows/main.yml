@@ -57,13 +57,13 @@ jobs:
       - name: Check for updates
         run: git status --porcelain | grep . && exit 0 || exit 0
       - name: Commiting locales
-          if: success()
-          run: |
-            git config --global user.email "developer@pleo.io"
-            git config --global user.name "Lingui police"
-            git add .
-            git commit -m "Locales update"
-            git push
+        if: success()
+        run: |
+          git config --global user.email "developer@pleo.io"
+          git config --global user.name "Lingui police"
+          git add .
+          git commit -m "Locales update"
+          git push
       - name: If no files cound
         if: failure()
         run: exit 0
