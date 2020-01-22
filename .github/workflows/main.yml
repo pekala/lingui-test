@@ -1,13 +1,13 @@
 name: Push keys to Lokalise
 
 on:
-  [push, status]:
-    # Only run workflow for pushes to specific branches
-    # branches:
-    #   - master
-    # Only run workflow when matching files are changed
-    # paths:
-    # - "src/locales/*/messages.po"
+  [push, status]
+  # Only run workflow for pushes to specific branches
+  # branches:
+  #   - master
+  # Only run workflow when matching files are changed
+  # paths:
+  # - "src/locales/*/messages.po"
 
 jobs:
   #upload:
