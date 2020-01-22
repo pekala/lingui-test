@@ -55,9 +55,9 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Check for updates
-        run: git status --porcelain | grep . && myNull="success" || myNull="failure"
+        run: git status --porcelain | grep . && $myNull="success" || $myNull="failure"
       - name: Commiting locales
-        if: myNull == "success"
+        if: $myNull == "success"
         run: |
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
