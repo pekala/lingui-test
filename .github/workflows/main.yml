@@ -55,11 +55,11 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Check for updates
-        run: git status --porcelain | grep . && echo ::set-env name=NEW_LOCALES::true || echo ::set-env name=NEW_LOCALES::false
+        run: git status --porcelain | grep . && ::set-env name=NEW_LOCALES::true || ::set-env name=NEW_LOCALES::false
       - name: Commiting locales
         if: success()
         run: |
-          NEW_LOCALES == true
+          $NEW_LOCALES == true
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
           git add .
