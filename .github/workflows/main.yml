@@ -1,7 +1,7 @@
 name: Push keys to Lokalise
 
 on:
-  [push, check_suite, check_run]
+  [push, repository_dispatch]
   # Only run workflow for pushes to specific branches
   # branches:
   #   - master
