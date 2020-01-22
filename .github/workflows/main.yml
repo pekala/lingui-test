@@ -64,7 +64,7 @@ jobs:
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
-          git commit -m "Locales updat6"
+          git commit -m "Locales updat7"
           echo "${{secrets.GITHUB_TOKEN}}"
           git push https://${{ github.actor }}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}} HEAD:"${GITHUB_REF:11}"
   # build:
