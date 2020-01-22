@@ -55,7 +55,7 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Check for updates
-        run: git status --porcelain | grep . && exit 0 || exit 0
+        run: git status --porcelain | grep . && exit 0 || exit 1
       - name: Commiting locales
         if: success()
         run: |
