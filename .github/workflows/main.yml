@@ -54,5 +54,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_REGISTRY_TOKEN }}
       - name: Extracting messages
         run: yarn extract
-      - name: Extracting messages
-        run: git status --porcelain | grep . && git add . && git commit -m "Locales update" && exit 0 || exit 0
+      - name: Add files
+        run: git add .
+      - name: Creating commit
+        run: git commit -m "Locales update"
