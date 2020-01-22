@@ -68,6 +68,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: Cache node modules
+        id: node_modules_cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-node_modules_cache
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+          registry-url: "https://npm.pkg.github.com"
+      - name: Install dependencies
+        if: steps.node_modules_cache.outputs.cache-hit != 'true'
+        run: yarn --frozen-lockfile --ignore-engines --ignore-optional --non-interactive --silent --ignore-scripts --production=false
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_REGISTRY_TOKEN }}
       - name: Extracting messages
         run: yarn extract
       - name: Checking for new messages
