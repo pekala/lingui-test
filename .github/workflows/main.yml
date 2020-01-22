@@ -55,15 +55,12 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Check for updates
-        run: git status --porcelain | grep . && exit 0 || exit 1
+        run: git status --porcelain | grep . && myNull="success" || myNull="failure"
       - name: Commiting locales
-        if: success()
+        if: myNull == "success"
         run: |
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
           git add .
           git commit -m "Locales update"
           git push
-      - name: If no files cound
-        if: failure()
-        run: exit 0
