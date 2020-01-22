@@ -58,14 +58,14 @@ jobs:
         run: git status --porcelain | grep . && exit 1 || exit 0
       - name: Commiting messages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
         if: failure()
         run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales update"
-          git remote set-url --push origin https://igorDolzh:$GITHUB_TOKEN@github.com/igorDolzh/lingui-test
+          git remote set-url --push origin https://igorDolzh:$SECRET_TOKEN@github.com/igorDolzh/lingui-test
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
