@@ -54,9 +54,11 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_REGISTRY_TOKEN }}
       - name: Extracting messages
         run: yarn extract
-      - name: Commiting locales
+      - name: Checking for new messages
+        run: git status --porcelain | grep . && exit 1 || exit 0
+      - name: Commiting messages
+        if: failure()
         run: |
-          git status --porcelain | grep . || exit 0
           git config --global user.email "developer@pleo.io"
           git config --global user.name "Lingui police"
           git add .
