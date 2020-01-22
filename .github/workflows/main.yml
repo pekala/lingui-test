@@ -65,6 +65,7 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales updat6"
+          echo "${{secrets.GITHUB_TOKEN}}"
           git push https://${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}} HEAD:"${GITHUB_REF:11}"
   # build:
   #   runs-on: ubuntu-latest
