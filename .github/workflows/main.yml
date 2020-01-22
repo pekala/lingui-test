@@ -55,9 +55,10 @@ jobs:
       - name: Extracting messages
         run: yarn extract
       - name: Commiting locales
-        run: git status --porcelain | grep . 
-        git config --global user.email "developer@pleo.io"
-        git config --global user.name "Lingui police"
-        git add .
-        git commit -m "Locales update"
-        git push || exit 0
+        run: |
+          git status --porcelain | grep . 
+          git config --global user.email "developer@pleo.io"
+          git config --global user.name "Lingui police"
+          git add .
+          git commit -m "Locales update"
+          git push || exit 0
