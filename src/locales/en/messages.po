@@ -17,6 +17,18 @@ msgstr ""
 msgid "13 Nice"
 msgstr "13 Nice"
 
+#: src/App.js:32
+msgid "Buffer 234"
+msgstr "Buffer 234"
+
+#: src/App.js:33
+msgid "Buffer bob"
+msgstr "Buffer bob"
+
+#: src/App.js:30
+msgid "Buffer eger"
+msgstr "Buffer eger"
+
 #: src/App.js:28
 msgid "Buffer zone"
 msgstr "Buffer zone"
@@ -25,31 +37,39 @@ msgstr "Buffer zone"
 msgid "Buffer zone111"
 msgstr "Buffer zone111"
 
-#: src/App.js:66
+#: src/App.js:31
+msgid "Buffer zongege111"
+msgstr "Buffer zongege111"
+
+#: src/App.js:70
 msgid "Crazy Nic!!"
 msgstr "Crazy Nic!!"
 
-#: src/App.js:43
+#: src/App.js:47
 msgid "Fire me"
 msgstr "Fire me"
 
 #: src/App.js:26
-msgid "Go go go"
-msgstr "Go go go"
+#~ msgid "Go go go"
+#~ msgstr "Go go go"
 
-#: src/App.js:42
+#: src/App.js:26
+msgid "Go gore go"
+msgstr "Go gore go"
+
+#: src/App.js:46
 msgid "Google me"
 msgstr "Google me"
 
-#: src/App.js:32
+#: src/App.js:36
 msgid "Hello sir"
 msgstr "Hello sir"
 
-#: src/App.js:41
+#: src/App.js:45
 msgid "Kiko kiko"
 msgstr "Kiko kiko"
 
-#: src/App.js:72
+#: src/App.js:76
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Last time I had to configure webpack {0,date}"
 
@@ -61,11 +81,11 @@ msgstr "Let's go"
 msgid "Make no push"
 msgstr "Make no push"
 
-#: src/App.js:35
+#: src/App.js:39
 msgid "New text"
 msgstr "New text"
 
-#: src/App.js:38
+#: src/App.js:42
 msgid "Next text"
 msgstr "Next text"
 
@@ -73,7 +93,7 @@ msgstr "Next text"
 msgid "Okey Google"
 msgstr "Okey Google"
 
-#: src/App.js:40
+#: src/App.js:44
 msgid "This hikolp 12312"
 msgstr "This hikolp 12312"
 
@@ -85,7 +105,7 @@ msgstr "This message is translated and has a <0>link</0>"
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr "This message will fallback to %1$s / %1$s!"
 
-#: src/App.js:39
+#: src/App.js:43
 msgid "This time it should work now go kola"
 msgstr "This time it should work now go kola"
 
@@ -93,6 +113,6 @@ msgstr "This time it should work now go kola"
 msgid "my.custom.id"
 msgstr "Custom ID works"
 
-#: src/App.js:46
+#: src/App.js:50
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
