@@ -42,7 +42,7 @@ jobs:
           node-version: "10.x"
           registry-url: "https://npm.pkg.github.com"
       - name: Extracting messages
-        run: yarn global remove babel-core @babel/core && yarn add @babel/env && npx lingui extract
+        run: npm i -g @babel/env && npx lingui extract
       - name: Checking for new messages
         run: git status --porcelain | grep . && exit 1 || exit 0
       - name: Commiting messages
