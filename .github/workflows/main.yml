@@ -36,12 +36,6 @@ jobs:
         uses: actions/checkout@v1
         with:
           fetch-depth: 1
-      - name: Cache node modules
-        id: lingui_modules_cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{ runner.os }}-lingui_modules_cache
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -49,9 +43,9 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
         if: steps.lingui_modules_cache.outputs.cache-hit != 'true'
-        run: yarn add babel-core@^7.0.0-bridge.0 @babel/core @lingui/cli
+        run: yarn add babel-core@^7.0.0-bridge.0 @babel/core
       - name: Extracting messages
-        run: yarn extract
+        run: npx lingui extract
       - name: Checking for new messages
         run: git status --porcelain | grep . && exit 1 || exit 0
       - name: Commiting messages

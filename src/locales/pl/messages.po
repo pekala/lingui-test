@@ -98,8 +98,12 @@ msgid "Next text"
 msgstr ""
 
 #: src/App.js:25
-msgid "Okey Google"
+msgid "Okey Gffdoogle"
 msgstr ""
+
+#: src/App.js:25
+#~ msgid "Okey Google"
+#~ msgstr ""
 
 #: src/App.js:46
 msgid "This hikolp 12312"
