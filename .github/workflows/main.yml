@@ -37,11 +37,11 @@ jobs:
         with:
           fetch-depth: 1
       - name: Cache node modules
-          id: lingui_modules_cache
-          uses: actions/cache@v1
-          with:
-            path: node_modules
-            key: ${{ runner.os }}-lingui_modules_cache
+        id: lingui_modules_cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-lingui_modules_cache
       - name: Setup node
         uses: actions/setup-node@v1
         with:
