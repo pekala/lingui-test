@@ -22,7 +22,7 @@ const App = () => {
       <h1>
         <Trans>Let's go</Trans>
         <Trans>Make no push</Trans>
-        <Trans>Okey Google</Trans>
+        <Trans>Okey Gffdoogle</Trans>
         <Trans>Go gore go</Trans>
         <Trans>Go go43re go</Trans>
         <Trans>Go hello go</Trans>

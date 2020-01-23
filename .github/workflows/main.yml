@@ -41,8 +41,11 @@ jobs:
         with:
           node-version: "10.x"
           registry-url: "https://npm.pkg.github.com"
+      - name: Install dependencies
+        if: steps.node_modules_cache.outputs.cache-hit != 'true'
+        run: yarn add babel-core@^7.0.0-bridge.0 @babel/core @lingui/cli
       - name: Extracting messages
-        run: yarn add babel-core@^7.0.0-bridge.0 @babel/core @lingui/cli && yarn extract
+        run: yarn extract
       - name: Checking for new messages
         run: git status --porcelain | grep . && exit 1 || exit 0
       - name: Commiting messages
