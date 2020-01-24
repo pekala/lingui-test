@@ -71,10 +71,10 @@ jobs:
                 output: {
                   title: '${{steps.type-coverage.outputs.coverage}}',
                   summary: '% of identifiers whose type is not any',
-                  "actions": [{
-                    "label": "Fix this",
-                    "description": "Let us fix that for you",
-                    "identifier": "fix_errors"
+                  actions: [{
+                    label: "Fix this",
+                    description: "Let us fix that for you",
+                    identifier: "fix_errors"
                   }]
                 }
               })
