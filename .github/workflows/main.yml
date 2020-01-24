@@ -58,22 +58,6 @@ jobs:
       #     git add .
       #     git commit -m "Locales updat6"
       #     git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
-
-  commit:
-    name: Commit
-    env:
-      CI: "true"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "10.x"
-          registry-url: "https://npm.pkg.github.com"
       - uses: actions/github-script@0.3.0
         id: start-check
         with:
@@ -86,7 +70,7 @@ jobs:
               ref: context.sha
             })
             return result.data.check_runs.find(run => run.name === 'LinguiJs test').id
-      - name: Show button
+      - name: Commiting messages
         uses: actions/github-script@0.3.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
