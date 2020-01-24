@@ -59,6 +59,7 @@ jobs:
       #     git commit -m "Locales updat6"
       #     git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - uses: actions/github-script@0.3.0
+        if: failure()
         id: start-check
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
@@ -71,6 +72,7 @@ jobs:
             })
             return result.data.check_runs.find(run => run.name === 'LinguiJs test').id
       - name: Commiting messages
+        if: failure()
         uses: actions/github-script@0.3.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
@@ -81,7 +83,7 @@ jobs:
               check_run_id: '${{steps.start-check.outputs.result}}',
               conclusion: 'success',
               output: {
-                title: '${{steps.type-coverage.outputs.coverage}}',
+                title: 'Title',
                 summary: '% of identifiers whose type is not any',
                 actions: [{
                   label: 'Fix this',
