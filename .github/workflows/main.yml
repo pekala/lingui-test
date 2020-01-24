@@ -1,4 +1,4 @@
-name: Push keys to Lokalise
+name: Push
 
 on:
   [push, repository_dispatch]
