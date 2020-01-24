@@ -25,7 +25,63 @@ jobs:
 
   #       # The relative directory where language files will be found
   #       file-path: src/locales/%LANG_ISO%/messages.po
-
+  typecov:
+    name: Type coverage
+    env:
+      CI: "true"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Cache node modules
+        id: node_modules_cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ hashFiles('yarn.lock') }}-node_modules_cache
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+          registry-url: "https://npm.pkg.github.com"
+      - uses: actions/github-script@0.3.0
+        id: start-check
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          previews: "antiope-preview"
+          script: |
+            const result = await github.checks.listForRef({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              ref: context.sha
+            })
+            return result.data.check_runs.find(run => run.name === 'Type coverage').id
+      - name: Install dependencies
+        if: steps.node_modules_cache.outputs.cache-hit != 'true'
+        run: yarn --frozen-lockfile --ignore-engines --ignore-optional --non-interactive --silent --ignore-scripts --production=false
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_REGISTRY_TOKEN }}
+      - name: Type check
+        id: type-coverage
+        run: |
+          coverage=$(./node_modules/.bin/type-coverage --strict --ignore-files "test/coverage/**" --ignore-files "test/config/**" --ignore-files "test/__mocks__/**" | head -n 1)
+          echo ::set-output name=coverage::$coverage
+      - uses: actions/github-script@0.3.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            await github.checks.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              check_run_id: '${{steps.start-check.outputs.result}}',
+              conclusion: 'success',
+              output: {
+                title: '${{steps.type-coverage.outputs.coverage}}',
+                summary: '% of identifiers whose type is not any',
+              }
+            })
   lint:
     name: L
     env:
