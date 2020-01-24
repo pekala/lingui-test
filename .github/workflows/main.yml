@@ -66,7 +66,7 @@ jobs:
             await github.checks.update({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              check_run_id: '${{steps.start-check.outputs.result}}',
+              check_run_id: 'hello',
               conclusion: 'success',
               output: {
                 title: '${{steps.type-coverage.outputs.coverage}}',
