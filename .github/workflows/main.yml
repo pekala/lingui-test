@@ -48,16 +48,36 @@ jobs:
         run: npx lingui extract
       - name: Checking for new messages
         run: git status --porcelain | grep . && exit 1 || exit 0
+      # - name: Commiting messages
+      #   env:
+      #     SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+      #   if: failure()
+      #   run: |
+      #     git config --global user.email "igor.techweb@gmail.com"
+      #     git config --global user.name "Igor Dolzhenkov"
+      #     git add .
+      #     git commit -m "Locales updat6"
+      #     git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - name: Commiting messages
-        env:
-          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
-        if: failure()
-        run: |
-          git config --global user.email "igor.techweb@gmail.com"
-          git config --global user.name "Igor Dolzhenkov"
-          git add .
-          git commit -m "Locales updat6"
-          git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+        - uses: actions/github-script@0.3.0
+          with:
+            github-token: ${{secrets.GITHUB_TOKEN}}
+            script: |
+              await github.checks.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                check_run_id: '${{steps.start-check.outputs.result}}',
+                conclusion: 'success',
+                output: {
+                  title: '${{steps.type-coverage.outputs.coverage}}',
+                  summary: '% of identifiers whose type is not any',
+                  "actions": [{
+                    "label": "Fix this",
+                    "description": "Let us fix that for you",
+                    "identifier": "fix_errors"
+                  }]
+                }
+              })
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
