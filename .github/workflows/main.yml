@@ -138,7 +138,7 @@ jobs:
               check_run_id: '${{steps.start-check.outputs.result}}',
               conclusion: 'success',
               output: {
-                title: 'T',
+                title: 'Igor title',
                 summary: 'summary',
               },
               actions: [{
