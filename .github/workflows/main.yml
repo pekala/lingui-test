@@ -140,12 +140,12 @@ jobs:
               output: {
                 title: 'T',
                 summary: '%',
-                actions: [{
-                  label: 'label',
-                  description: 'desc',
-                  identifier: 'ident'
-                }]
-              }
+              },
+              actions: [{
+                label: 'label',
+                description: 'desc',
+                identifier: 'ident'
+              }]
             })
   # build:
   #   runs-on: ubuntu-latest
