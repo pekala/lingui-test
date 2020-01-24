@@ -63,7 +63,6 @@ jobs:
         id: start-check
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
-          previews: "antiope-preview"
           script: |
             const result = await github.checks.listForRef({
               owner: context.repo.owner,
@@ -72,6 +71,7 @@ jobs:
             })
             return result.data.check_runs.find(run => run.name === 'L').id
       - name: Commiting messages
+        if: failure()
         uses: actions/github-script@0.3.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
