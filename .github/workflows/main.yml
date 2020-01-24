@@ -114,7 +114,7 @@ jobs:
       #     git add .
       #     git commit -m "Locales updat6"
       #     git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
-      - uses: actions/github-script@0.3.0
+      - uses: actions/github-script@0.4.0
         # if: failure()
         id: start-check
         with:
@@ -128,7 +128,7 @@ jobs:
             return result.data.check_runs.find(run => run.name === 'L').id
       - name: Commiting messages
         # if: failure()
-        uses: actions/github-script@0.3.0
+        uses: actions/github-script@0.4.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
@@ -139,7 +139,7 @@ jobs:
               conclusion: 'success',
               output: {
                 title: 'Igor title',
-                summary: 'summary',
+                summary: 'Igor summary',
               },
               actions: [{
                 label: 'label',
