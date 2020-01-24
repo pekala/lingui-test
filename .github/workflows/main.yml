@@ -136,10 +136,15 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               check_run_id: '${{steps.start-check.outputs.result}}',
-              conclusion: 'success',
+              conclusion: 'failure',
               output: {
                 title: 'T',
                 summary: '%',
+                actions: [{
+                  label: 'label',
+                  description: 'desc',
+                  identifier: 'ident'
+                }]
               }
             })
   # build:
