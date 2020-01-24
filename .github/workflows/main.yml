@@ -44,10 +44,10 @@ jobs:
       - name: Install dependencies
         if: steps.lingui_modules_cache.outputs.cache-hit != 'true'
         run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
-      - name: Extracting messages
-        run: npx lingui extract
-      - name: Checking for new messages
-        run: git status --porcelain | grep . && exit 1 || exit 0
+      # - name: Extracting messages
+      #   run: npx lingui extract
+      # - name: Checking for new messages
+      #   run: git status --porcelain | grep . && exit 1 || exit 0
       # - name: Commiting messages
       #   env:
       #     SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
@@ -72,9 +72,9 @@ jobs:
                 title: '${{steps.type-coverage.outputs.coverage}}',
                 summary: '% of identifiers whose type is not any',
                 actions: [{
-                  label: "Fix this",
-                  description: "Let us fix that for you",
-                  identifier: "fix_errors"
+                  label: 'Fix this',
+                  description: 'Let us fix that for you',
+                  identifier: 'fix_errors'
                 }]
               }
             })
