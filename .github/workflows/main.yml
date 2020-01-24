@@ -59,7 +59,7 @@ jobs:
       #     git commit -m "Locales updat6"
       #     git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - name: Commiting messages
-      - uses: actions/github-script@0.3.0
+        uses: actions/github-script@0.3.0
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
