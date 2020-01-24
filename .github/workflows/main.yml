@@ -59,25 +59,25 @@ jobs:
       #     git commit -m "Locales updat6"
       #     git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - name: Commiting messages
-        - uses: actions/github-script@0.3.0
-          with:
-            github-token: ${{secrets.GITHUB_TOKEN}}
-            script: |
-              await github.checks.update({
-                owner: context.repo.owner,
-                repo: context.repo.repo,
-                check_run_id: '${{steps.start-check.outputs.result}}',
-                conclusion: 'success',
-                output: {
-                  title: '${{steps.type-coverage.outputs.coverage}}',
-                  summary: '% of identifiers whose type is not any',
-                  actions: [{
-                    label: "Fix this",
-                    description: "Let us fix that for you",
-                    identifier: "fix_errors"
-                  }]
-                }
-              })
+      - uses: actions/github-script@0.3.0
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            await github.checks.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              check_run_id: '${{steps.start-check.outputs.result}}',
+              conclusion: 'success',
+              output: {
+                title: '${{steps.type-coverage.outputs.coverage}}',
+                summary: '% of identifiers whose type is not any',
+                actions: [{
+                  label: "Fix this",
+                  description: "Let us fix that for you",
+                  identifier: "fix_errors"
+                }]
+              }
+            })
   # build:
   #   runs-on: ubuntu-latest
   #   steps:
