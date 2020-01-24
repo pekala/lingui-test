@@ -27,7 +27,7 @@ jobs:
   #       file-path: src/locales/%LANG_ISO%/messages.po
 
   lint:
-    name: LinguiJs test
+    name: L
     env:
       CI: "true"
     runs-on: ubuntu-latest
@@ -70,7 +70,7 @@ jobs:
               repo: context.repo.repo,
               ref: context.sha
             })
-            return result.data.check_runs.find(run => run.name === 'LinguiJs test').id
+            return result.data.check_runs.find(run => run.name === 'L').id
       - name: Commiting messages
         if: failure()
         uses: actions/github-script@0.3.0
@@ -83,8 +83,8 @@ jobs:
               check_run_id: '${{steps.start-check.outputs.result}}',
               conclusion: 'success',
               output: {
-                title: 'Title',
-                summary: '% of identifiers whose type is not any',
+                title: 'T',
+                summary: '%',
                 actions: [{
                   label: 'Fix this',
                   description: 'Let us fix that for you',
