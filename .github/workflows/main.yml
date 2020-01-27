@@ -125,14 +125,6 @@ jobs:
                 description: 'desc',
                 identifier: 'created'
               },{
-                label: 'completed',
-                description: 'desc',
-                identifier: 'completed'
-              },{
-                label: 'rerequested',
-                description: 'desc',
-                identifier: 'rerequested'
-              },{
                 label: 'requested_action',
                 description: 'desc',
                 identifier: 'requested_action'
