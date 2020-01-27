@@ -1,6 +1,6 @@
 name: Commit
 
-on: [check_run, check_suite, repository_dispatch]
+on: [status, check_run, check_suite, repository_dispatch]
 
 jobs:
   fix_errors:
