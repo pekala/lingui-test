@@ -1,8 +1,6 @@
 name: Commit
 
-on:
-  check_run:
-    types: [requested_action]
+on: requested_action
 
 jobs:
   commit:
