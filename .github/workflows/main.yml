@@ -1,7 +1,7 @@
 name: Push
 
 on:
-  [push, repository_dispatch]
+  [push, repository_dispatch, check_run]
   # Only run workflow for pushes to specific branches
   # branches:
   #   - master
