@@ -123,7 +123,7 @@ jobs:
               actions: [{
                 label: 'FIX',
                 description: 'desc',
-                identifier: 'requested_action'
+                identifier: 'commit'
               }]
             })
   # build:
