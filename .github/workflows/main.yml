@@ -132,10 +132,12 @@ jobs:
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
-            await github.checks.update({
+            console.log(context);
+            await github.checks.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              check_run_id: '${{steps.start-check.outputs.result}}',
+              name: 'Igor name',
+              head_sha: context.sha,
               conclusion: 'success',
               output: {
                 title: 'Igor title',
