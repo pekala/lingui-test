@@ -121,9 +121,25 @@ jobs:
                 summary: 'Igor summary',
               },
               actions: [{
-                label: 'FIX2',
+                label: 'created',
                 description: 'desc',
-                identifier: 'check-run-commit'
+                identifier: 'created'
+              },{
+                label: 'completed',
+                description: 'desc',
+                identifier: 'completed'
+              },{
+                label: 'rerequested',
+                description: 'desc',
+                identifier: 'rerequested'
+              },{
+                label: 'requested_action',
+                description: 'desc',
+                identifier: 'requested_action'
+              },{
+                label: 'fix_errors',
+                description: 'desc',
+                identifier: 'fix_errors'
               }]
             })
   # build:

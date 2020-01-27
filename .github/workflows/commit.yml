@@ -3,7 +3,7 @@ name: Commit
 on: [check_run, check_suite, repository_dispatch]
 
 jobs:
-  check-run-commit:
+  fix_errors:
     name: Commiting
     env:
       CI: "true"
