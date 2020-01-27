@@ -103,14 +103,12 @@ jobs:
       - name: Extracting messages
         run: npx lingui extract
       - name: Checking for new messages
-        run: git status --porcelain | grep . && exit 1 || exit 0
+        run: git diff --unified=0 | grep -e -msgid -e -msgstr && exit 1 || exit 0
       - name: Add buttons
         if: failure()
-        env:
-          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
         uses: actions/github-script@0.4.0
         with:
-          github-token: ${{secrets.SECRET_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
             await github.checks.create({
               owner: context.repo.owner,
