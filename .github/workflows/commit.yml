@@ -5,8 +5,8 @@ on:
     types: [rerequested, requested_action]
 
 jobs:
-  commit:
-    name: L
+  check-run-commit:
+    name: Commiting
     env:
       CI: "true"
     runs-on: ubuntu-latest
