@@ -23,14 +23,19 @@ const App = () => {
         <Trans>Buffer 234</Trans>
         <Trans>Buffer 234</Trans> <Trans>Buffer 234</Trans>
         <Trans>Let's go</Trans>
+        <Trans>13 N23ice</Trans>
         <Trans>Make no push</Trans>
         <Trans>Okey Google</Trans>
         <Trans>Go go go</Trans>
         <Trans>Buffer 234</Trans>
         <Trans>13 Nice</Trans>
+        <Trans>Buffer zongege111</Trans>
+        <Trans>Buffer 234</Trans>
+        <Trans>Buffer bob</Trans>
         <Trans>Buffer zone</Trans>
         <Trans>Buffer zone111</Trans>
         <Trans>Buffer eger</Trans>
+        <Trans>Okey 343Google</Trans>
         <Trans>Buffer zongege111</Trans>
         <Trans>Buffer 234</Trans>
         <Trans>Buffer bob</Trans>
