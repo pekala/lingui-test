@@ -20,10 +20,13 @@ const App = () => {
         <Trans id="my.custom.id">Custom ID works</Trans>
       </h1>
       <h1>
+        <Trans>Buffer 234</Trans>
+        <Trans>Buffer 234</Trans> <Trans>Buffer 234</Trans>
         <Trans>Let's go</Trans>
         <Trans>Make no push</Trans>
         <Trans>Okey Google</Trans>
         <Trans>Go go go</Trans>
+        <Trans>Buffer 234</Trans>
         <Trans>13 Nice</Trans>
         <Trans>Buffer zone</Trans>
         <Trans>Buffer zone111</Trans>
@@ -31,6 +34,9 @@ const App = () => {
         <Trans>Buffer zongege111</Trans>
         <Trans>Buffer 234</Trans>
         <Trans>Buffer bob</Trans>
+        <Trans>Buffer zone</Trans>
+        <Trans>Buffer zone</Trans>
+        <Trans>Buffer zone</Trans>
       </h1>
       <h1>
         <Trans>Hello sir</Trans>
