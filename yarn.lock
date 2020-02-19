@@ -3052,6 +3052,11 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
+git-po-merge@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/git-po-merge/-/git-po-merge-0.1.0.tgz#94fca2e4b38c82666051886a1a5a5b07523c76af"
+  integrity sha1-lPyi5LOMgmZgUYhqGlpbB1I8dq8=
+
 glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"

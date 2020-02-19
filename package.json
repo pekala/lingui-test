@@ -25,6 +25,7 @@
     "babel-plugin-macros": "^2.8.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "git-po-merge": "^0.1.0",
     "serve": "^11.2.0",
     "typescript": "^3.7.3",
     "webpack": "^4.41.2",
