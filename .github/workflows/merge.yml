@@ -23,7 +23,7 @@ jobs:
       - name: Merge with master
         run: git merge origin/master
       - name: Remove messages
-        run: echo -n "" > app/locales/en/messages.po
+        run: echo -n "" > src/locales/en/messages.po
       - name: Extracting messages
         run: npx lingui extract
       - name: Checking for new messages
