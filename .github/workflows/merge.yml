@@ -29,9 +29,8 @@ jobs:
         if: failure()
         run: echo -n "" > src/locales/en/messages.po
       - name: Extracting messages
+        if: failure()
         run: npx lingui extract
-      - name: Checking for new messages
-        run: git status --porcelain | grep . && exit 1 || exit 0
       - name: Commiting messages
         env:
           SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
