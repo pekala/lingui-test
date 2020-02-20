@@ -12,7 +12,7 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/App.js:29
-msgid "13 Nice"
+msgid "13 Niwefwce"
 msgstr "13 Nice"
 
 #: src/App.js:34
