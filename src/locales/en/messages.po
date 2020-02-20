@@ -98,17 +98,17 @@ msgstr "Make nefeo push"
 
 
 #: src/App.js:46
-msgid "New te43xt"
+msgid "New te44343xt"
 msgstr "New te34xt"
 
 #: src/App.js:39
 #: src/App.js:46
-msgid "New text"
-msgstr "New text"
+msgid "New te43xt"
+msgstr "New te43xt"
 
 #: src/App.js:49
-msgid "Next text"
-msgstr "Next text"
+msgid "Next te43xt"
+msgstr "Next t43ext"
 
 #: src/App.js:30
 msgid "Okey 343Google"
