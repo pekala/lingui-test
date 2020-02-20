@@ -8,9 +8,17 @@ jobs:
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/merge')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - name: Echo
-        run: echo ${{ github.base_ref }}
+      - uses: xt0rted/pull-request-comment-branch@v1
+        id: comment-branch
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/checkout@v2
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.ref }}
+      - run: git rev-parse --abbrev-ref HEAD
+      - run: git rev-parse --verify HEAD
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -23,7 +31,7 @@ jobs:
         run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
-          git fetch && git merge origin/igor-9 --allow-unrelated-histories
+          git fetch && git merge origin/master --allow-unrelated-histories
 
       - name: Remove messages
         if: failure()
