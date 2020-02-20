@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Echo
-        run: echo ${{GITHUB_REF:11}}
+        run: echo ${{ github.base_ref }}
       - name: Setup node
         uses: actions/setup-node@v1
         with:
