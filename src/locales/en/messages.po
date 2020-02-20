@@ -16,7 +16,11 @@ msgstr ""
 #~ msgstr "13 N23ice"
 
 #: src/App.js:29
-msgid "13 Ni234234234ce"
+#~ msgid "13 Ni234234234ce"
+#~ msgstr "13 Nice"
+
+#: src/App.js:29
+msgid "13 Nice"
 msgstr "13 Nice"
 
 #~ msgid "Bufefeffer 234"
