@@ -23,7 +23,7 @@ jobs:
         run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
-          git fetch && git merge origin/igor-8 --allow-unrelated-histories
+          git fetch && git merge origin/igor-9 --allow-unrelated-histories
 
       - name: Remove messages
         if: failure()
