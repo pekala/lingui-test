@@ -48,7 +48,7 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales updat6"
-          git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${{steps.comment-branch.outputs.ref:11}}"
+          git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${{ steps.comment-branch.outputs.ref }}"
 
   always_job:
     name: Always run job
