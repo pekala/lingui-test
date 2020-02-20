@@ -8,6 +8,9 @@ msgstr ""
 msgid "13 N23233ice"
 msgstr "13 N2332323ice"
 
+msgid "13 N23ice"
+msgstr "13 N23ice"
+
 msgid "13 Nice"
 msgstr "13 Nice"
 
@@ -114,7 +117,6 @@ msgstr "This hikolp 12312"
 msgid "This message is translated and has a <0>link</0>"
 msgstr "This message is translated and has a <0>link</0>"
 
-#, fuzzy
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 "#-#-#-#-#  base  #-#-#-#-#\n"
@@ -141,6 +143,12 @@ msgid ""
 msgstr ""
 "{count, plural, =0 {There're no messages} one {There's # message in your "
 "inbox} other {There're # messages in your inbox}}"
+
+#~ msgid "13 N23i23423423ce"
+#~ msgstr "13 N23ice"
+
+#~ msgid "13 Ni234234234ce"
+#~ msgstr "13 Nice"
 
 #~ msgid "Buffer bob"
 #~ msgstr "Buffer bob"
