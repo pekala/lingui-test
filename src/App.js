@@ -37,14 +37,6 @@ const App = () => {
       </h1>
       <h1>
         <Trans>New text</Trans>
-        <Trans>Hello sir</Trans>
-      </h1>
-      <h1>
-        <Trans>New text</Trans>
-        <Trans>Hello sir</Trans>
-      </h1>
-      <h1>
-        <Trans>New text</Trans>
         <Trans>Buffer zone</Trans>
       </h1>
       <h1>
