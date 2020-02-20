@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Echo
-        run: echo ${{ github }}
+        run: echo ${{ github[@] }}
       - name: Setup node
         uses: actions/setup-node@v1
         with:
