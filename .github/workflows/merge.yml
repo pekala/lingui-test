@@ -21,7 +21,7 @@ jobs:
         if: steps.lingui_modules_cache.outputs.cache-hit != 'true'
         run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
       - name: Merge with master
-        run: git merge origin/master
+        run: git fetch && git merge master
       - name: Remove messages
         run: echo -n "" > src/locales/en/messages.po
       - name: Extracting messages
