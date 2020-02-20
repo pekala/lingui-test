@@ -32,7 +32,7 @@ jobs:
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git fetch && git merge origin/master --allow-unrelated-histories
-          echo GITHUB_REF ${GITHUB_REF} ${{GITHUB_REF}}
+          echo "GITHUB_REF ${GITHUB_REF} ${{GITHUB_REF}}"
 
       - name: Remove messages
         if: failure()
