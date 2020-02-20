@@ -1,0 +1,47 @@
+on:
+  issue_comment:
+    types: [created]
+name: Merge
+jobs:
+  merge:
+    name: Merge
+    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/merge')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+        with:
+          fetch-depth: 1
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+          registry-url: "https://npm.pkg.github.com"
+      - name: Install dependencies
+        if: steps.lingui_modules_cache.outputs.cache-hit != 'true'
+        run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
+      - name: Merge with master
+        run: git merge origin/master
+      - name: Remove messages
+        run: echo -n "" > app/locales/en/messages.po
+      - name: Extracting messages
+        run: npx lingui extract
+      - name: Checking for new messages
+        run: git status --porcelain | grep . && exit 1 || exit 0
+      - name: Commiting messages
+        env:
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        if: failure()
+        run: |
+          git config --global user.email "igor.techweb@gmail.com"
+          git config --global user.name "Igor Dolzhenkov"
+          git add .
+          git commit -m "Locales updat6"
+          git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+
+always_job:
+  name: Always run job
+  runs-on: ubuntu-latest
+  steps:
+    - name: Always run
+  run: echo "This job is used to prevent the workflow to fail when all other jobs are skipped."

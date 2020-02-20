@@ -12,108 +12,118 @@ msgstr ""
 "Language-Team: \n"
 "Content-Transfer-Encoding: \n"
 
-#: src/App.js:26
-msgid "13 N23ice"
-msgstr ""
-
-#~ msgid "13 Nice"
+#~ msgid "13 N23ice"
 #~ msgstr ""
 
-#: src/App.js:23
-msgid "Bufefeffer 234"
+#: src/App.js:29
+msgid "13 Nice"
 msgstr ""
 
-#: src/App.js:24
-#: src/App.js:24
-#: src/App.js:30
-#: src/App.js:32
+#~ msgid "Bufefeffer 234"
+#~ msgstr ""
+
+#: src/App.js:34
 msgid "Buffer 234"
 msgstr ""
 
-#: src/App.js:33
-msgid "Buffer be24324ob"
-msgstr ""
+#~ msgid "Buffer be24324ob"
+#~ msgstr ""
 
 #~ msgid "Buffer bob"
 #~ msgstr ""
 
-#~ msgid "Buffer eger"
-#~ msgstr ""
-
-#: src/App.js:34
 #: src/App.js:35
-#: src/App.js:40
-msgid "Buffer zone"
+msgid "Buffer bob kola"
 msgstr ""
 
-#~ msgid "Buffer zone111"
-#~ msgstr ""
-
-#: src/App.js:31
-msgid "Buffer zongege111"
-msgstr ""
-
-#: src/App.js:77
-msgid "Crazy Nic!!"
-msgstr "Szalony Nik!!"
-
-#: src/App.js:54
-msgid "Fire me"
-msgstr ""
-
-#: src/App.js:29
-msgid "Go go go"
-msgstr ""
-
-#: src/App.js:53
-msgid "Google me"
-msgstr ""
-
-#: src/App.js:36
-#: src/App.js:43
-msgid "Hello sir"
-msgstr ""
-
-#: src/App.js:52
-msgid "Kiko kiko"
-msgstr ""
-
-#: src/App.js:83
-msgid "Last time I had to configure webpack {0,date}"
-msgstr "Cośtam cośtam, data: {0,date}"
-
-#~ msgid "Let's go"
-#~ msgstr ""
-
-#: src/App.js:25
-msgid "Letefe's go"
-msgstr ""
-
-#: src/App.js:27
-msgid "Make nefeo push"
-msgstr ""
-
-#~ msgid "Make no push"
-#~ msgstr ""
-
-#: src/App.js:39
-#: src/App.js:46
-msgid "New text"
-msgstr ""
-
-#: src/App.js:49
-msgid "Next text"
+#: src/App.js:32
+msgid "Buffer eger"
 msgstr ""
 
 #: src/App.js:30
-msgid "Okey 343Google"
+msgid "Buffer zone"
+msgstr ""
+
+#: src/App.js:31
+msgid "Buffer zone111"
+msgstr ""
+
+#: src/App.js:33
+msgid "Buffer zongege111"
+msgstr ""
+
+#: src/App.js:72
+msgid "Crazy Nic!!"
+msgstr "Szalony Nik!!"
+
+#: src/App.js:49
+msgid "Fire me"
+msgstr ""
+
+#~ msgid "Go go go"
+#~ msgstr ""
+
+#: src/App.js:27
+msgid "Go go43re go"
+msgstr ""
+
+#: src/App.js:26
+msgid "Go gore go"
 msgstr ""
 
 #: src/App.js:28
-msgid "Okey Google"
+msgid "Go hello go"
 msgstr ""
 
-#: src/App.js:51
+#: src/App.js:48
+msgid "Google me"
+msgstr ""
+
+#: src/App.js:38
+msgid "Hello sir"
+msgstr ""
+
+#: src/App.js:47
+msgid "Kiko kiko"
+msgstr ""
+
+#: src/App.js:78
+msgid "Last time I had to configure webpack {0,date}"
+msgstr "Cośtam cośtam, data: {0,date}"
+
+#: src/App.js:23
+msgid "Let's go"
+msgstr ""
+
+#~ msgid "Letefe's go"
+#~ msgstr ""
+
+#~ msgid "Make nefeo push"
+#~ msgstr ""
+
+#: src/App.js:24
+msgid "Make no push"
+msgstr ""
+
+#: src/App.js:41
+msgid "New text"
+msgstr ""
+
+#: src/App.js:44
+msgid "Next text"
+msgstr ""
+
+#~ msgid "Okey 343Google"
+#~ msgstr ""
+
+#: src/App.js:25
+msgid "Okey Gffdoogle"
+msgstr ""
+
+#~ msgid "Okey Google"
+#~ msgstr ""
+
+#: src/App.js:46
 msgid "This hikolp 12312"
 msgstr ""
 
@@ -125,7 +135,7 @@ msgstr "Ta wiadomość jest przetłumaczona i ma <0>odnośnik</0>"
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 
-#: src/App.js:50
+#: src/App.js:45
 msgid "This time it should work now go kola"
 msgstr "Tym razem powinno działać teraz przejdź do kola"
 
@@ -133,6 +143,6 @@ msgstr "Tym razem powinno działać teraz przejdź do kola"
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:57
+#: src/App.js:52
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"

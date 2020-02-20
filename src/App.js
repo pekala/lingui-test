@@ -20,24 +20,19 @@ const App = () => {
         <Trans id="my.custom.id">Custom ID works</Trans>
       </h1>
       <h1>
-        <Trans>Bufefeffer 234</Trans>
-        <Trans>Buffer 234</Trans> <Trans>Buffer 234</Trans>
-        <Trans>Letefe's go</Trans>
-        <Trans>13 N23ice</Trans>
-        <Trans>Make nefeo push</Trans>
-        <Trans>Okey Google</Trans>
-        <Trans>Go go go</Trans>
-        <Trans>Buffer 234</Trans> <Trans>Okey 343Google</Trans>
+        <Trans>Let's go</Trans>
+        <Trans>Make no push</Trans>
+        <Trans>Okey Gffdoogle</Trans>
+        <Trans>Go gore go</Trans>
+        <Trans>Go go43re go</Trans>
+        <Trans>Go hello go</Trans>
+        <Trans>13 Nice</Trans>
+        <Trans>Buffer zone</Trans>
+        <Trans>Buffer zone111</Trans>
+        <Trans>Buffer eger</Trans>
         <Trans>Buffer zongege111</Trans>
         <Trans>Buffer 234</Trans>
-        <Trans>Buffer be24324ob</Trans>
-        <Trans>Buffer zone</Trans>
-        <Trans>Buffer zone</Trans>
-        <Trans>Hello sir</Trans>
-      </h1>
-      <h1>
-        <Trans>New text</Trans>
-        <Trans>Buffer zone</Trans>
+        <Trans>Buffer bob kola</Trans>
       </h1>
       <h1>
         <Trans>Hello sir</Trans>
