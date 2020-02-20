@@ -39,9 +39,9 @@ jobs:
           git commit -m "Locales updat6"
           git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
 
-always_job:
-  name: Always run job
-  runs-on: ubuntu-latest
-  steps:
-    - name: Always run
-  run: echo "This job is used to prevent the workflow to fail when all other jobs are skipped."
+  always_job:
+    name: Always run job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Always run
+    run: echo "This job is used to prevent the workflow to fail when all other jobs are skipped."
