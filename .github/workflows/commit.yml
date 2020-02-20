@@ -1,6 +1,6 @@
 name: Commit
 
-on: [check_run]
+on: [pull]
 
 jobs:
   fix_errors:
