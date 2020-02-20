@@ -12,8 +12,8 @@ msgstr ""
 "Plural-Forms: \n"
 
 #: src/App.js:29
-msgid "13 Niw4423433423423434343efwce"
-msgstr "13 Ni234234ce"
+msgid "13 Niw44234332334423423434343efwce"
+msgstr "13 2342342Ni234234ce"
 
 #: src/App.js:34
 msgid "Buffer 234"
