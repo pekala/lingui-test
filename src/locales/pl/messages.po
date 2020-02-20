@@ -1,130 +1,115 @@
 msgid ""
 msgstr ""
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"X-Generator: lokalise.com\n"
-"Project-Id-Version: Sample Project\n"
-"PO-Revision-Date: 2019-12-30 15:34\n"
-"Last-Translator: lokalise.com\n"
-"Language-Team: lokalise.com\n\n"
+"MIME-Version: 1.0\n"
 "Language: pl\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n"
 "Plural-Forms: \n"
 
-#: src/App.js:29
+msgid "13 N23ice"
+msgstr ""
+
 msgid "13 Nice"
 msgstr ""
 
-#: src/App.js:34
+msgid "Bufefeffer 234"
+msgstr ""
+
 msgid "Buffer 234"
 msgstr ""
 
-#: src/App.js:35
+msgid "Buffer be24324ob"
+msgstr ""
+
 msgid "Buffer bob"
 msgstr ""
 
-#: src/App.js:32
 msgid "Buffer eger"
 msgstr ""
 
-#: src/App.js:30
 msgid "Buffer zone"
 msgstr ""
 
-#: src/App.js:31
 msgid "Buffer zone111"
 msgstr ""
 
-#: src/App.js:33
 msgid "Buffer zongege111"
 msgstr ""
 
-#: src/App.js:72
 msgid "Crazy Nic!!"
 msgstr "Szalony Nik!!"
 
-#: src/App.js:49
 msgid "Fire me"
 msgstr ""
 
-#: src/App.js:26
-#~ msgid "Go go go"
-#~ msgstr ""
+msgid "Go go go"
+msgstr ""
 
-#: src/App.js:27
 msgid "Go go43re go"
 msgstr ""
 
-#: src/App.js:26
 msgid "Go gore go"
 msgstr ""
 
-#: src/App.js:28
 msgid "Go hello go"
 msgstr ""
 
-#: src/App.js:48
 msgid "Google me"
 msgstr ""
 
-#: src/App.js:38
 msgid "Hello sir"
 msgstr ""
 
-#: src/App.js:47
 msgid "Kiko kiko"
 msgstr ""
 
-#: src/App.js:78
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Cośtam cośtam, data: {0,date}"
 
-#: src/App.js:23
 msgid "Let's go"
 msgstr ""
 
-#: src/App.js:24
+msgid "Letefe's go"
+msgstr ""
+
+msgid "Make nefeo push"
+msgstr ""
+
 msgid "Make no push"
 msgstr ""
 
-#: src/App.js:41
 msgid "New text"
 msgstr ""
 
-#: src/App.js:44
 msgid "Next text"
 msgstr ""
 
-#: src/App.js:25
+msgid "Okey 343Google"
+msgstr ""
+
 msgid "Okey Gffdoogle"
 msgstr ""
 
-#: src/App.js:25
-#~ msgid "Okey Google"
-#~ msgstr ""
+msgid "Okey Google"
+msgstr ""
 
-#: src/App.js:46
 msgid "This hikolp 12312"
 msgstr ""
 
-#: src/App.js:14
 msgid "This message is translated and has a <0>link</0>"
 msgstr "Ta wiadomość jest przetłumaczona i ma <0>odnośnik</0>"
 
-#: src/App.js:10
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 
-#: src/App.js:45
 msgid "This time it should work now go kola"
 msgstr "Tym razem powinno działać teraz przejdź do kola"
 
-#: src/App.js:20
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:52
-msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
-msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"
+msgid ""
+"{count, plural, =0 {There're no messages} one {There's # message in your "
+"inbox} other {There're # messages in your inbox}}"
+msgstr ""
+"{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few "
+"{Masz # wiadomości} many {Masz # wiadomości}}"
