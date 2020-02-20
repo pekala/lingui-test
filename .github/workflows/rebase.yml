@@ -1,6 +1,6 @@
 on:
   issue_comment:
-    types: [check_run]
+    types: [pull]
 name: Automatic Rebase
 jobs:
   rebase:
