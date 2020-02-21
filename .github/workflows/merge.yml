@@ -28,7 +28,7 @@ jobs:
         run: |
           git config --global user.email "dev@pleo.io"
           git config --global user.name "Dev bot"
-          git fetch && git merge origin/master --allow-unrelated-histories && exit 0 || exit 1
+          git fetch && git merge origin/master --allow-unrelated-histories && exit 1 || exit 0
 
       - name: Remove messages
         run: echo -n "" > src/locales/en/messages.po
