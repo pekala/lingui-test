@@ -1,6 +1,6 @@
 name: Commit
 
-on: push
+on: pull
 
 jobs:
   fix_errors:
