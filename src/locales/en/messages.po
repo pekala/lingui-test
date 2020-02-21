@@ -5,8 +5,8 @@ msgstr ""
 "Language: \n"
 "Plural-Forms: \n"
 
-msgid "13 234234"
-msgstr "13 234234"
+msgid "13 223423434234"
+msgstr "13 23234234234"
 
 msgid "13 Niw434343efwce"
 msgstr "13 Nice"
