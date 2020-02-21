@@ -5,7 +5,7 @@ name: Merge
 jobs:
   merge:
     name: Merge
-    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/merge')
+    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/pull-translations')
     runs-on: ubuntu-latest
     steps:
       - uses: xt0rted/pull-request-comment-branch@v1
@@ -17,15 +17,12 @@ jobs:
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
-      - run: git rev-parse --abbrev-ref HEAD
-      - run: git rev-parse --verify HEAD
       - name: Setup node
         uses: actions/setup-node@v1
         with:
           node-version: "10.x"
           registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
-        if: steps.lingui_modules_cache.outputs.cache-hit != 'true'
         run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
       - name: Merge with master
         run: |
@@ -37,17 +34,11 @@ jobs:
         if: failure()
         run: echo -n "" > src/locales/en/messages.po
       - name: Extracting messages
-        if: failure()
         run: npx lingui extract
       - name: Commiting messages
         env:
           PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
-        if: failure()
         run: |
           git add .
           git commit -m "Merge with master: message extraction"
-      - name: Push messages
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.comment-branch.outputs.ref }}
+          git push https://igorDolzh:$PUSH_TOKEN@github.com/${{ github.repository }} HEAD:${{ steps.comment-branch.outputs.ref }}

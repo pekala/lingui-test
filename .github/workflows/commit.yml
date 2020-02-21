@@ -19,7 +19,6 @@ jobs:
           node-version: "10.x"
           registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
-        if: steps.lingui_modules_cache.outputs.cache-hit != 'true'
         run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
       - name: Extracting messages
         run: npx lingui extract
