@@ -34,8 +34,10 @@ jobs:
         if: failure()
         run: echo -n "" > src/locales/en/messages.po
       - name: Extracting messages
+        if: failure()
         run: npx lingui extract
       - name: Commiting messages
+        if: failure()
         env:
           PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
         run: |
