@@ -33,4 +33,10 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Locales updat6"
-          git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+        # git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+      - name: Push changes
+        if: failure()
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.comment-branch.outputs.ref }}

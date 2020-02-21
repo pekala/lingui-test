@@ -39,11 +39,11 @@ jobs:
       - name: Commiting messages
         if: failure()
         env:
-          PUSH_TOKEN: ${{ secrets.PUSH_TOKEN }}
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
         run: |
           git add .
           git commit -m "Merge with master: message extraction"
-          git push https://igorDolzh:$PUSH_TOKEN@github.com/${{ github.repository }} HEAD:${{ steps.comment-branch.outputs.ref }}
+          git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:${{ steps.comment-branch.outputs.ref }}
     #   - name: Push changes
     #     if: failure()
     #     uses: ad-m/github-push-action@master
