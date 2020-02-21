@@ -1,5 +1,5 @@
-name: TestPush
-on: push
+name: TestPull
+on: pull_request
 
 jobs:
   deploy:
