@@ -39,6 +39,7 @@ jobs:
           SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
         run: |
           git add src/locales/en/messages.po
+          git rm .
           git commit -m "Merge with master: message extraction"
           git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:${{ steps.comment-branch.outputs.ref }}
     #   - name: Push changes
