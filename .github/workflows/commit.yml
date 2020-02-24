@@ -20,7 +20,7 @@ jobs:
           registry-url: "https://npm.pkg.github.com"
       - name: Install dependencies
         run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
-      - name: Extracting! 432423423232423423423423 messages
+      - name: Extracting!14 432423423232423423423423 messages
         run: npx lingui extract
       - name: Checking for new messages
         run: git status --porcelain | grep . && exit 1 || exit 0

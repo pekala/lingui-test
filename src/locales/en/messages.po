@@ -16,8 +16,8 @@ msgstr ""
 #~ msgstr "13 23423423423423345345232342234243443234234234234"
 
 #: src/App.js:29
-msgid "13 Ni223423434234ce"
-msgstr "13 N223423434234ice"
+msgid "11 Ni223423434234ce"
+msgstr "11 N223423434234ice"
 
 #~ msgid "13 Niw434343efwce"
 #~ msgstr "13 Nice"
