@@ -16,7 +16,8 @@ jobs:
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
-      - uses: igorDolzh/lokalise-file-push@v0.0.7
+      - name: Lokalise File Push
+        uses: igorDolzh/lokalise-file-push@0.0.7
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
