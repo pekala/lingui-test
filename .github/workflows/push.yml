@@ -17,7 +17,7 @@ jobs:
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
       - name: Lokalise File Push
-        uses: igorDolzh/lokalise-file-push@0.0.8
+        uses: igorDolzh/lokalise-file-push@0.0.9
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -27,6 +27,8 @@ jobs:
           project-id: ${{ secrets.LOCALIZE_PROJECT }}
 
           # The relative file path where language files will be found
-          file-path: src/locales/en/messages.po
+          file-path: src/locales/%LANG_ISO%/messages.po
 
           tag: pre-release
+
+          locales: [en, da]
