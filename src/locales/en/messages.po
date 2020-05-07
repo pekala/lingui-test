@@ -119,8 +119,8 @@ msgid "Next text"
 msgstr "Next text"
 
 #: src/App.js:24
-msgid "Nice push"
-msgstr "Nice push"
+#~ msgid "Nice push"
+#~ msgstr "Nice push"
 
 #: src/App.js:27
 msgid "Okey Gffdoogle"
@@ -141,6 +141,10 @@ msgstr "This message will fallback to {fallbackLang} / {count}!"
 #: src/App.js:47
 msgid "This time it should work now go kola"
 msgstr "This time it should work now go kola"
+
+#: src/App.js:24
+msgid "Wow, what push"
+msgstr "Wow, what push"
 
 #: src/App.js:20
 msgid "my.custom.id"

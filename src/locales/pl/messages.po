@@ -118,8 +118,8 @@ msgid "Next text"
 msgstr ""
 
 #: src/App.js:24
-msgid "Nice push"
-msgstr ""
+#~ msgid "Nice push"
+#~ msgstr ""
 
 #~ msgid "Okey 343Google"
 #~ msgstr ""
@@ -146,6 +146,10 @@ msgstr ""
 #: src/App.js:47
 msgid "This time it should work now go kola"
 msgstr "Tym razem powinno działać teraz przejdź do kola"
+
+#: src/App.js:24
+msgid "Wow, what push"
+msgstr ""
 
 #: src/App.js:20
 msgid "my.custom.id"
