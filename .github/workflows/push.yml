@@ -31,4 +31,4 @@ jobs:
 
           tag: pre-release
 
-          locales: [en, da]
+          locales: "['en', 'da']"
