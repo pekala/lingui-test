@@ -1,31 +1,26 @@
 on:
-    issue_comment:
-      types: [created]
+  issue_comment:
+    types: [created]
 name: Push translations
 jobs:
-    merge:
-        name: Push translations
-        if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/push-translation')
-        runs-on: ubuntu-latest
-        steps:
-            - uses: xt0rted/pull-request-comment-branch@v1
-                id: comment-branch
-                with:
-                repo_token: ${{ secrets.GITHUB_TOKEN }}
-            - uses: actions/checkout@v1
-            - uses: igorDolzh/lokalise-file-push@v0.0.7
-                with:
-                # Api token for the Lokalise account
-                # with read/write access to the project
-                api-token: ${{ secrets.LOCALIZE_TOKEN }}
+  merge:
+    name: Push translations
+    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/push-translation')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: xt0rted/pull-request-comment-branch@v1
+          id: comment-branch
+          with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v1
+      - uses: igorDolzh/lokalise-file-push@v0.0.7
+          with:
+          # Api token for the Lokalise account
+          # with read/write access to the project
+          api-token: ${{ secrets.LOCALIZE_TOKEN }}
 
-                # ID of the project to sync
-                project-id: 555095675eb16c7253d6f3.87410578
+          # ID of the project to sync
+          project-id: 555095675eb16c7253d6f3.87410578
 
-                # The relative file path where language files will be found
-                file-path: src/locales/en/messages.po
-
-                # Tags
-                tags:
-                    - pre-release
-  
+          # The relative file path where language files will be found
+          file-path: src/locales/en/messages.po
