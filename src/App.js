@@ -22,6 +22,7 @@ const App = () => {
       <h1>
         <Trans>Let's go</Trans>
         <Trans>Make no push</Trans>
+        <Trans>NEW LOCALE</Trans>
         <Trans>Okey Gffdoogle</Trans>
         <Trans>Go gore go</Trans>
         <Trans>Go go43re go</Trans>
@@ -55,12 +56,12 @@ const App = () => {
           one="There's # message in your inbox"
           other="There're # messages in your inbox"
         />
-        <button type="button" onClick={() => setCount(count => count + 1)}>
+        <button type="button" onClick={() => setCount((count) => count + 1)}>
           +
         </button>
         <button
           type="button"
-          onClick={() => setCount(count => Math.max(0, count - 1))}
+          onClick={() => setCount((count) => Math.max(0, count - 1))}
         >
           -
         </button>
