@@ -17,7 +17,7 @@ jobs:
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
       - name: Lokalise File Push
-        uses: pleo-io/actions/lokalise-file-push
+        uses: pleo-io/actions/lokalise-file-push@v5
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
