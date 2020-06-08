@@ -16,11 +16,18 @@ jobs:
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
-      - name: Get short SHA
-        id: comment
-        run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c15-)"
+      # Find the PR associated with this push, if there is one.
+      - uses: jwalton/gh-find-current-pr@v1
+        id: findPr
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # This will echo "Your PR is 7", or be skipped if there is no current PR.
+      - run: echo "Your PR is ${PR}"
+        if: success() && steps.findPr.outputs.number
+        env:
+          PR: ${{ steps.findPr.outputs.pr }}
       - name: Lokalise File Push
-        uses: pleo-io/actions/lokalise-file-push@v5.3
+        uses: pleo-io/actions/lokalise-file-push@v5
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -32,6 +39,6 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
+          tag: pre-release
 
           locales: '["en", "da"]'
