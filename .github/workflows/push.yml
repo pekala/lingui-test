@@ -24,10 +24,7 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       # This will echo "Your PR is 7", or be skipped if there is no current PR.
-      - run: echo "Your PR is ${PR}"
-        if: success() && steps.findPr.outputs.number
-        env:
-          PR: ${{ steps.findPr.outputs.pr }}
+      - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
       - name: Get short SHA
         id: comment
         run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c15-)"
