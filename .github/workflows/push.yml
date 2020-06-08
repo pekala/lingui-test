@@ -16,6 +16,9 @@ jobs:
         if: success()
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
+      - name: Get short SHA
+        id: comment
+        run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c15-)"
       - name: Lokalise File Push
         uses: pleo-io/actions/lokalise-file-push@v5.3
         with:
@@ -29,6 +32,6 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tags: '["pre-release", "${{ github.event.comment.body[0:8] }}"]'
+          tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
 
           locales: '["en", "da"]'
