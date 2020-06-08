@@ -27,7 +27,7 @@ jobs:
         env:
           PR: ${{ steps.findPr.outputs.pr }}
       - name: Lokalise File Push
-        uses: pleo-io/actions/lokalise-file-push@v5
+        uses: pleo-io/actions/lokalise-file-push@v5.3
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
