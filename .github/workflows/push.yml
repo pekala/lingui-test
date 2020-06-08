@@ -17,7 +17,7 @@ jobs:
         with:
           ref: ${{ steps.comment-branch.outputs.ref }}
       - name: Lokalise File Push
-        uses: pleo-io/actions/lokalise-file-push@v5.2
+        uses: pleo-io/actions/lokalise-file-push@v5.3
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -29,6 +29,6 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tag: pre-release
+          tags: '["pre-release", "${github.event.comment.body:15}"]'
 
           locales: '["en", "da"]'
