@@ -23,9 +23,12 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       # This will echo "Your PR is 7", or be skipped if there is no current PR.
       - run: echo "Your PR is ${PR}"
-        if: steps.findPr.outputs.number
+        if: success() && steps.findPr.outputs.number
         env:
           PR: ${{ steps.findPr.outputs.pr }}
+      - name: Get short SHA
+        id: comment
+        run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c15-)"
       - name: Lokalise File Push
         uses: pleo-io/actions/lokalise-file-push@v5.3
         with:
@@ -39,6 +42,6 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tag: pre-release
+          tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
 
           locales: '["en", "da"]'
