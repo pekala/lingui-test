@@ -6,12 +6,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: khan/pull-request-comment-trigger@master
-        id: check
+      - uses: actions/checkout@v1
+      # Find the PR associated with this push, if there is one.
+      - uses: jwalton/gh-find-current-pr@v1
+        id: findPr
         with:
-          trigger: "@deploy"
-          reaction: rocket
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # This will echo "Your PR is 7", or be skipped if there is no current PR.
+      - run: echo "Your PR is ${PR}"
+        if: success() && steps.findPr.outputs.number
         env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-      - run: "echo Found it!"
-        if: steps.check.outputs.triggered == 'true'
+          PR: ${{ steps.findPr.outputs.pr }}
