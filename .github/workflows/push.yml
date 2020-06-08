@@ -29,6 +29,6 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tags: '["pre-release", github.event.comment.body:15]'
+          tags: '["pre-release", ${{ github.event.comment.body:15 }}]'
 
           locales: '["en", "da"]'
