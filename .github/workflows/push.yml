@@ -45,7 +45,7 @@ jobs:
 
           locales: '["en", "da"]'
       - name: Lokalise create task
-        uses: pleo-io/actions/lokalise-create-taskv6.0
+        uses: pleo-io/actions/lokalise-create-task@v6.0
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
