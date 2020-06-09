@@ -27,9 +27,9 @@ jobs:
       - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
       - name: Get short SHA
         id: comment
-        run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c15-)"
+        run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c16-)"
       - name: Lokalise File Push
-        uses: pleo-io/actions/lokalise-file-push@v5.3
+        uses: pleo-io/actions/lokalise-file-push@v6.0
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -44,3 +44,37 @@ jobs:
           tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
 
           locales: '["en", "da"]'
+      - name: Lokalise create task
+      - uses: pleo-io/actions/lokalise-create-taskv6.0
+        with:
+          # Api token for the Lokalise account
+          # with read/write access to the project
+          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+          # ID of the project to sync
+          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+          # Tags
+          tags: '["${{ steps.comment.outputs.tagname }}"]'
+
+          # Name of team from localise
+          team-name: Pleo team
+
+          # List of email for task assignee
+          assignee-email-list: '{
+            "en": ["igor@pleo.io"],
+            "fr": ["igor@pleo.io"],
+            "de": ["igor@pleo.io"],
+            "es": ["igor@pleo.io"],
+            "sv": ["igor@pleo.io"],
+            "da": ["igor@pleo.io"]
+          }'
+
+          # Task title
+          task-title: ${{ github.event.issue.title }}
+
+          # Task description
+          task-description: ${{ github.event.issue.body }}
+
+          # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
+          task-options: '{"auto_close_task": true, "auto_close_languages": true}'
