@@ -58,7 +58,7 @@ jobs:
           tags: '["${{ steps.comment.outputs.tagname }}"]'
 
           # Name of team from localise
-          team-name: Pleo team
+          team-name: Pleo Team
 
           # List of email for task assignee
           assignee-email-list: '{
