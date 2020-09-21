@@ -58,7 +58,7 @@ jobs:
   
             tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
   
-            locales: '["en", "da"]'
+            locales: '["en"]'
         - name: Lokalise create task
           if: steps.check_pr_labels.outputs.result == 'true'
           uses: pleo-io/actions/lokalise-create-task@v6.0

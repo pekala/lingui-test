@@ -27,6 +27,7 @@ const App = () => {
         <Trans>NEW LOCALE</Trans>
         <Trans>Saved world</Trans>
         <Trans>Hi guy</Trans>
+        <Trans>Loli</Trans>
         <Trans>NEW LOCALE</Trans>
         <Trans>Okey Gffdoogle</Trans>
         <Trans>Go gore go</Trans>
