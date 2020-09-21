@@ -1,10 +1,10 @@
 on:
     label:
-      types: [created]
+      types: [created, edited]
 name: Created label
 jobs:
     merge:
-      name: Push translations
+      name: Created label
       runs-on: ubuntu-latest
       steps:
         - name: Debug Action
