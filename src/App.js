@@ -25,6 +25,10 @@ const App = () => {
         <Trans>Wow, what push</Trans>
         <Trans>Make no push</Trans>
         <Trans>NEW LOCALE</Trans>
+        <Trans>Saved123123 world</Trans>
+        <Trans>Hi guy</Trans>
+        <Trans>Loli</Trans>
+        <Trans>NEW LOCALE</Trans>
         <Trans>Okey Gffdoogle</Trans>
         <Trans>Go gore go</Trans>
         <Trans>Go go43re go</Trans>
