@@ -11,6 +11,13 @@ jobs:
           if: success()
           with:
             ref: ${{ steps.comment-branch.outputs.ref }}
+
+        - uses: Dreamcodeio/pr-has-label-action@master
+          id: checkLabel
+          with:
+            label: start-localisation
+        - name: Does 'pull_request' has ${{ steps.checkLabel.outputs.checkedLabel }} label? 
+          run: echo "${{ steps.checkLabel.outputs.hasLabel }}" 
         # Find the PR associated with this push, if there is one.
         - uses: jwalton/gh-find-current-pr@v1
           id: findPr
