@@ -2,7 +2,7 @@ on:
     pull_request:
       branches:
         - master
-name: Push translations
+name: Push transl1231ations
 jobs:
     merge:
       name: Push translations
