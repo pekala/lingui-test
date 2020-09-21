@@ -19,20 +19,9 @@ jobs:
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
         # This will echo "Your PR is 7", or be skipped if there is no current PR.
-        - run: echo "Your PR is ${PR} ${{steps.findPr.outputs.title }} ${{steps.findPr.outputs.body }} ${{github.event.after}}"
-          if: success() && steps.findPr.outputs.number
-          env:
-            PR: ${{ steps.findPr.outputs.pr }}
+        - run: echo "Your PR is ${{github.event.pull_request.title }} ${{github.event.pull_request.body }} ${{github.event.pull_request.head.sha}} ${{github.event.label.name}}"
         # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
 
-        - name: Check PR labels action step
-          id: check_pr_labels
-          uses: shioyang/check-pr-labels-on-push-action@v1.0.3
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            labels: '["start-localisation"]'
-        - name: See result
-          run: echo "${{ steps.check_pr_labels.outputs.result }}"
         # # Find the PR associated with this push, if there is one.
         # - uses: jwalton/gh-find-current-pr@v1
         #   id: findPr
@@ -41,11 +30,11 @@ jobs:
         # This will echo "Your PR is 7", or be skipped if there is no current PR.
         # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
         - name: Get short SHA
-          if: steps.check_pr_labels.outputs.result == 'true'
+          if: github.event.label.name == 'start-localisation'
           id: comment
-          run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c16-)"
+          run: echo "::set-output name=tagname::$(echo ${{github.event.pull_request.head.sha}} | cut -c16-)"
         - name: Lokalise File Push
-          if: steps.check_pr_labels.outputs.result == 'true'
+          if: github.event.label.name == 'start-localisation'
           uses: pleo-io/actions/lokalise-file-push@v6.0
           with:
             # Api token for the Lokalise account
@@ -62,7 +51,7 @@ jobs:
   
             locales: '["en"]'
         - name: Lokalise create task
-          if: steps.check_pr_labels.outputs.result == 'true'
+          if: github.event.label.name == 'start-localisation'
           uses: pleo-io/actions/lokalise-create-task@v6.0
           with:
             # Api token for the Lokalise account
@@ -89,10 +78,10 @@ jobs:
             }'
   
             # Task title
-            task-title: ${{ steps.findPr.outputs.title }}
+            task-title: ${{ github.event.pull_request.title }}
   
             # Task description
-            task-description: ${{ steps.findPr.outputs.body }}
+            task-description: ${{ github.event.pull_request.body }}
   
             # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
             task-options: '{"auto_close_task": true, "auto_close_languages": true}'
