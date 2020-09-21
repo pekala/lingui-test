@@ -17,11 +17,11 @@ jobs:
           with:
             github-token: ${{ secrets.GITHUB_TOKEN }}
         # This will echo "Your PR is 7", or be skipped if there is no current PR.
-        - run: echo "Your PR is ${PR} ${{steps.findPr.outputs.title }} ${{steps.findPr.outputs.body }}"
+        - run: echo "Your PR is ${PR} ${{steps.findPr.outputs.title }} ${{steps.findPr.outputs.body }} ${{github.event.after}}"
           if: success() && steps.findPr.outputs.number
           env:
             PR: ${{ steps.findPr.outputs.pr }}
-        - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
+        # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
 
         - name: Check PR labels action step
           id: check_pr_labels
@@ -37,11 +37,13 @@ jobs:
         #   with:
         #     github-token: ${{ secrets.GITHUB_TOKEN }}
         # This will echo "Your PR is 7", or be skipped if there is no current PR.
-        - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
+        # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
         - name: Get short SHA
+          if: steps.check_pr_labels.outputs.result == 'true'
           id: comment
-          run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c16-)"
+          run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c16-)"
         - name: Lokalise File Push
+          if: steps.check_pr_labels.outputs.result == 'true'
           uses: pleo-io/actions/lokalise-file-push@v6.0
           with:
             # Api token for the Lokalise account
@@ -58,6 +60,7 @@ jobs:
   
             locales: '["en", "da"]'
         - name: Lokalise create task
+          if: steps.check_pr_labels.outputs.result == 'true'
           uses: pleo-io/actions/lokalise-create-task@v6.0
           with:
             # Api token for the Lokalise account
@@ -84,10 +87,10 @@ jobs:
             }'
   
             # Task title
-            task-title: ${{ github.event.issue.title }}
+            task-title: ${{ steps.findPr.outputs.title }}
   
             # Task description
-            task-description: ${{ github.event.issue.body }}
+            task-description: ${{ steps.findPr.outputs.body }}
   
             # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
             task-options: '{"auto_close_task": true, "auto_close_languages": true}'
