@@ -1,4 +1,4 @@
-on: pull_request 
+on: push 
 name: Push translations
 jobs:
     merge:
@@ -11,6 +11,7 @@ jobs:
           if: success()
           with:
             ref: ${{ steps.comment-branch.outputs.ref }}
+        - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
 
         - uses: Dreamcodeio/pr-has-label-action@master
           id: checkLabel
