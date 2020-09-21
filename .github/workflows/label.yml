@@ -1,7 +1,6 @@
-on:
-    push
-  name: Push translations
-  jobs:
+on: push 
+name: Push translations
+jobs:
     merge:
       name: Push translations
       runs-on: ubuntu-latest
