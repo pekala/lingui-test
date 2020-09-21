@@ -1,7 +1,4 @@
-on:
-    pull_request:
-      branches:
-        - master
+on: push
 name: Push transl1231ations
 jobs:
     merge:
@@ -16,12 +13,14 @@ jobs:
             ref: ${{ steps.comment-branch.outputs.ref }}
         - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
 
-        - uses: Dreamcodeio/pr-has-label-action@master
-          id: checkLabel
+        - name: Check PR labels action step
+          id: check_pr_labels
+          uses: shioyang/check-pr-labels-on-push-action@v1.0.3
           with:
-            label: start-localisation
-        - name: Does 'pull_request' has ${{ steps.checkLabel.outputs.checkedLabel }} label? 
-          run: echo "${{ steps.checkLabel.outputs.hasLabel }}" 
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+            labels: '["enhancement"]'
+        - name: See result
+          run: echo "${{ steps.check_pr_labels.outputs.result }}"
         # Find the PR associated with this push, if there is one.
         - uses: jwalton/gh-find-current-pr@v1
           id: findPr
