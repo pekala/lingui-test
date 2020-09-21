@@ -1,4 +1,6 @@
-on: label
+on:
+    pull_request:
+      types: [labeled]
 name: Created label
 jobs:
     merge:
