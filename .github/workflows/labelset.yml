@@ -1,5 +1,4 @@
 on: label
-
 name: Created label
 jobs:
     merge:
