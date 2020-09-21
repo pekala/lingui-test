@@ -15,14 +15,14 @@ msgstr ""
 #~ msgid "13 N23ice"
 #~ msgstr ""
 
-#: src/App.js:36
+#: src/App.js:37
 msgid "13 Nice"
 msgstr ""
 
 #~ msgid "Bufefeffer 234"
 #~ msgstr ""
 
-#: src/App.js:41
+#: src/App.js:42
 msgid "Buffer 234"
 msgstr ""
 
@@ -32,66 +32,66 @@ msgstr ""
 #~ msgid "Buffer bob"
 #~ msgstr ""
 
-#: src/App.js:42
+#: src/App.js:43
 msgid "Buffer bob kola"
 msgstr ""
 
-#: src/App.js:39
+#: src/App.js:40
 msgid "Buffer eger"
 msgstr ""
 
-#: src/App.js:37
+#: src/App.js:38
 msgid "Buffer zone"
 msgstr ""
 
-#: src/App.js:38
+#: src/App.js:39
 msgid "Buffer zone111"
 msgstr ""
 
-#: src/App.js:40
+#: src/App.js:41
 msgid "Buffer zongege111"
 msgstr ""
 
-#: src/App.js:79
+#: src/App.js:80
 msgid "Crazy Nic!!"
 msgstr "Szalony Nik!!"
 
-#: src/App.js:56
+#: src/App.js:57
 msgid "Fire me"
 msgstr ""
 
 #~ msgid "Go go go"
 #~ msgstr ""
 
-#: src/App.js:34
+#: src/App.js:35
 msgid "Go go43re go"
 msgstr ""
 
-#: src/App.js:33
+#: src/App.js:34
 msgid "Go gore go"
 msgstr ""
 
-#: src/App.js:35
+#: src/App.js:36
 msgid "Go hello go"
 msgstr ""
 
-#: src/App.js:55
+#: src/App.js:56
 msgid "Google me"
 msgstr ""
 
-#: src/App.js:45
+#: src/App.js:46
 msgid "Hello sir"
 msgstr ""
 
-#: src/App.js:29
+#: src/App.js:30
 msgid "Hi guy"
 msgstr ""
 
-#: src/App.js:54
+#: src/App.js:55
 msgid "Kiko kiko"
 msgstr ""
 
-#: src/App.js:85
+#: src/App.js:86
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Cośtam cośtam, data: {0,date}"
 
@@ -99,22 +99,26 @@ msgstr "Cośtam cośtam, data: {0,date}"
 msgid "Let's go"
 msgstr ""
 
+#: src/App.js:25
+msgid "Let's go kola"
+msgstr ""
+
 #~ msgid "Letefe's go"
 #~ msgstr ""
 
-#: src/App.js:30
+#: src/App.js:31
 msgid "Loli"
 msgstr ""
 
 #~ msgid "Make nefeo push"
 #~ msgstr ""
 
-#: src/App.js:26
+#: src/App.js:27
 msgid "Make no push"
 msgstr ""
 
-#: src/App.js:27
-#: src/App.js:31
+#: src/App.js:28
+#: src/App.js:32
 msgid "NEW LOCALE"
 msgstr ""
 
@@ -122,11 +126,11 @@ msgstr ""
 msgid "New ride"
 msgstr ""
 
-#: src/App.js:48
+#: src/App.js:49
 msgid "New text"
 msgstr ""
 
-#: src/App.js:51
+#: src/App.js:52
 msgid "Next text"
 msgstr ""
 
@@ -137,7 +141,7 @@ msgstr ""
 #~ msgid "Okey 343Google"
 #~ msgstr ""
 
-#: src/App.js:32
+#: src/App.js:33
 msgid "Okey Gffdoogle"
 msgstr ""
 
@@ -148,11 +152,11 @@ msgstr ""
 #~ msgid "Saved world"
 #~ msgstr ""
 
-#: src/App.js:28
+#: src/App.js:29
 msgid "Saved123123 world"
 msgstr ""
 
-#: src/App.js:53
+#: src/App.js:54
 msgid "This hikolp 12312"
 msgstr ""
 
@@ -164,11 +168,11 @@ msgstr "Ta wiadomość jest przetłumaczona i ma <0>odnośnik</0>"
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 
-#: src/App.js:52
+#: src/App.js:53
 msgid "This time it should work now go kola"
 msgstr "Tym razem powinno działać teraz przejdź do kola"
 
-#: src/App.js:25
+#: src/App.js:26
 msgid "Wow, what push"
 msgstr ""
 
@@ -176,6 +180,6 @@ msgstr ""
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:59
+#: src/App.js:60
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"
