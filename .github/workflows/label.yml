@@ -42,6 +42,10 @@ jobs:
           if: steps.check_pr_labels.outputs.result == 'true'
           id: comment
           run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c16-)"
+        - name: Get branch name
+          if: steps.check_pr_labels.outputs.result == 'true'
+          id: branch
+          run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c1-11)"
         - name: Lokalise File Push
           if: steps.check_pr_labels.outputs.result == 'true'
           uses: pleo-io/actions/lokalise-file-push@v6.0
@@ -90,7 +94,7 @@ jobs:
             task-title: ${{ steps.findPr.outputs.title }}
   
             # Task description
-            task-description: '${{ steps.findPr.outputs.body }} <repo>${{ github.event.repository.name }}</repo> <ref>${{ github.event.ref }}</ref>'
+            task-description: '${{ steps.findPr.outputs.body }} <repo>${{ github.event.repository.name }}</repo> <ref>${{ steps.branch.outputs.name }}</ref>'
   
             # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
             task-options: '{"auto_close_task": true, "auto_close_languages": true}'
