@@ -22,7 +22,7 @@ msgstr ""
 #~ msgid "Bufefeffer 234"
 #~ msgstr ""
 
-#: src/App.js:42
+#: src/App.js:43
 msgid "Buffer 234"
 msgstr ""
 
@@ -32,11 +32,11 @@ msgstr ""
 #~ msgid "Buffer bob"
 #~ msgstr ""
 
-#: src/App.js:43
+#: src/App.js:44
 msgid "Buffer bob kola"
 msgstr ""
 
-#: src/App.js:40
+#: src/App.js:41
 msgid "Buffer eger"
 msgstr ""
 
@@ -45,18 +45,22 @@ msgid "Buffer zone"
 msgstr ""
 
 #: src/App.js:39
+msgid "Buffer zone 123123 123 123 123"
+msgstr ""
+
+#: src/App.js:40
 msgid "Buffer zone111"
 msgstr ""
 
-#: src/App.js:41
+#: src/App.js:42
 msgid "Buffer zongege111"
 msgstr ""
 
-#: src/App.js:80
+#: src/App.js:81
 msgid "Crazy Nic!!"
 msgstr "Szalony Nik!!"
 
-#: src/App.js:57
+#: src/App.js:58
 msgid "Fire me"
 msgstr ""
 
@@ -75,11 +79,11 @@ msgstr ""
 msgid "Go hello go"
 msgstr ""
 
-#: src/App.js:56
+#: src/App.js:57
 msgid "Google me"
 msgstr ""
 
-#: src/App.js:46
+#: src/App.js:47
 msgid "Hello sir"
 msgstr ""
 
@@ -87,11 +91,11 @@ msgstr ""
 msgid "Hi guy"
 msgstr ""
 
-#: src/App.js:55
+#: src/App.js:56
 msgid "Kiko kiko"
 msgstr ""
 
-#: src/App.js:86
+#: src/App.js:87
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Cośtam cośtam, data: {0,date}"
 
@@ -133,11 +137,11 @@ msgstr ""
 msgid "New ride"
 msgstr ""
 
-#: src/App.js:49
+#: src/App.js:50
 msgid "New text"
 msgstr ""
 
-#: src/App.js:52
+#: src/App.js:53
 msgid "Next texfefeft"
 msgstr ""
 
@@ -167,7 +171,7 @@ msgstr ""
 msgid "Saved123123 world"
 msgstr ""
 
-#: src/App.js:54
+#: src/App.js:55
 msgid "This hikolp 12312"
 msgstr ""
 
@@ -179,7 +183,7 @@ msgstr "Ta wiadomość jest przetłumaczona i ma <0>odnośnik</0>"
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 
-#: src/App.js:53
+#: src/App.js:54
 msgid "This time it should work now go kola"
 msgstr "Tym razem powinno działać teraz przejdź do kola"
 
@@ -191,6 +195,6 @@ msgstr ""
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:60
+#: src/App.js:61
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"
