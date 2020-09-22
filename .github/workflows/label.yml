@@ -90,7 +90,7 @@ jobs:
             task-title: ${{ steps.findPr.outputs.title }}
   
             # Task description
-            task-description: "${{ steps.findPr.outputs.body }} <repo>${{ github.event.repository.name }}</repo> <ref>$(echo ${GITHUB_REF#refs/heads/})</ref>"
+            task-description: '${{ steps.findPr.outputs.body }} <repo>${{ github.event.repository.name }}</repo> <ref>$(echo ${GITHUB_REF#refs/heads/})</ref>'
   
             # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
             task-options: '{"auto_close_task": true, "auto_close_languages": true}'
