@@ -121,9 +121,12 @@ msgstr ""
 msgid "Make no push"
 msgstr ""
 
-#: src/App.js:28
 #: src/App.js:32
 msgid "NEW LOCALE"
+msgstr ""
+
+#: src/App.js:28
+msgid "NEW LOCALE3232"
 msgstr ""
 
 #: src/App.js:23
