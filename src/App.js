@@ -49,7 +49,7 @@ const App = () => {
         <Trans>New text</Trans>
       </h1>
       <h1>
-        <Trans>Next text</Trans>
+        <Trans>Next texfefeft</Trans>
         <Trans>This time it should work now go kola</Trans>
         <Trans>This hikolp 12312</Trans>
         <Trans>Kiko kiko</Trans>

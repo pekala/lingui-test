@@ -135,8 +135,12 @@ msgid "New text"
 msgstr ""
 
 #: src/App.js:52
-msgid "Next text"
+msgid "Next texfefeft"
 msgstr ""
+
+#: src/App.js:52
+#~ msgid "Next text"
+#~ msgstr ""
 
 #: src/App.js:24
 #~ msgid "Nice push"
