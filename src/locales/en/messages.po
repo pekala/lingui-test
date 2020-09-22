@@ -107,8 +107,12 @@ msgid "Let's go"
 msgstr "Let's go"
 
 #: src/App.js:25
-msgid "Let's go kola"
-msgstr "Let's go kola"
+#~ msgid "Let's go kola"
+#~ msgstr "Let's go kola"
+
+#: src/App.js:25
+msgid "Let's go kola_ wefwef"
+msgstr "Let's go kola_ wefwef"
 
 #: src/App.js:31
 msgid "Loli"
