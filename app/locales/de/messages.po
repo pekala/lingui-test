@@ -1728,6 +1728,12 @@ msgstr "Weitere Details von %1$s ausstehend"
 msgid "Awaiting review..."
 msgstr "Pr체fung ausstehend"
 
+#: app/scripts/pages/auth/settings/tags/tag.tsx:332
+#: app/scripts/pages/auth/settings/tags/tag.tsx:334
+#, fuzzy
+msgid "back"
+msgstr "zur체ck"
+
 #: app/scripts/pages/auth/expenses/manage/expenses.tsx:237
 #: app/scripts/pages/auth/pocket/components/reconcile-modal-form-review.tsx:67
 #: app/scripts/pages/auth/pocket/components/reconcile-modal-form.tsx:82
@@ -1738,12 +1744,6 @@ msgstr "Pr체fung ausstehend"
 #, fuzzy
 msgid "Back"
 msgstr "Zur체ck"
-
-#: app/scripts/pages/auth/settings/tags/tag.tsx:332
-#: app/scripts/pages/auth/settings/tags/tag.tsx:334
-#, fuzzy
-msgid "back"
-msgstr "zur체ck"
 
 #: app/scripts/pages/auth/team/plastic-cards/order/order.tsx:487
 #, fuzzy
@@ -2019,6 +2019,10 @@ msgstr ""
 
 #: src/App.js:33
 msgid "Buffer zone"
+msgstr ""
+
+#: src/App.js:39
+msgid "Buffer zone 123123 123 123 123"
 msgstr ""
 
 #: src/App.js:34
@@ -5061,6 +5065,10 @@ msgstr "Hallo"
 msgid "Hi {0}"
 msgstr "Hallo %s"
 
+#: src/App.js:29
+msgid "Hi guy"
+msgstr ""
+
 #: app/scripts/components/accordion/accordion.tsx:38
 #: app/scripts/pages/auth/team/plastic-cards/plastic-card-orders/previous-orders.tsx:39
 #, fuzzy
@@ -5880,6 +5888,14 @@ msgstr "Wie w채re es mit einer virtuellen Pleo-Karte? Diese Karte ist perfekt f�
 msgid "Let's go"
 msgstr ""
 
+#: src/App.js:25
+msgid "Let's go kola"
+msgstr "Let's go"
+
+#: src/App.js:25
+msgid "Let's go kola_ wefwef"
+msgstr ""
+
 #: app/scripts/pages/auth/settings/accounting/csv.tsx:95
 #, fuzzy
 msgid "Letter used for the verification series on which Pleo expenses\n                                    are booked."
@@ -6080,6 +6096,10 @@ msgstr "Anmelden bei <0>Fortnox</0>"
 #, fuzzy
 msgid "Logout"
 msgstr "Abmelden"
+
+#: src/App.js:30
+msgid "Loli"
+msgstr ""
 
 #: app/scripts/components/address/address-lookup.jsx:131
 #, fuzzy
@@ -6520,6 +6540,14 @@ msgstr "Das Pleo-Wallet wurde erfolgreich aufgeladen"
 msgid "NEW LOCALE"
 msgstr ""
 
+#: src/App.js:28
+msgid "NEW LOCALE3232"
+msgstr ""
+
+#: src/App.js:33
+msgid "NEW LOsdfsdfsdf CALE"
+msgstr ""
+
 #: app/scripts/pages/public/reset-password/reset-password.tsx:78
 #, fuzzy
 msgid "New password"
@@ -6559,6 +6587,10 @@ msgstr "N채chster Schritt: Vollst채ndige Einrichtung"
 #, fuzzy
 msgid "Next step: Create tags"
 msgstr "N채chster Schritt: Tags erstellen"
+
+#: src/App.js:52
+msgid "Next texfefeft"
+msgstr ""
 
 #: src/App.js:47
 msgid "Next text"
@@ -7766,15 +7798,15 @@ msgstr "Pleo"
 msgid "PLEO (Pleo default account)"
 msgstr "PLEO (Pleo Referenzkonto)"
 
-#: app/scripts/pages/auth/settings/accounting/direct.tsx:403
-#, fuzzy
-msgid "Pleo Account"
-msgstr "Pleo Account"
-
 #: app/scripts/store/accounting/actions.ts:388
 #, fuzzy
 msgid "Pleo account"
 msgstr "Pleo-Konto"
+
+#: app/scripts/pages/auth/settings/accounting/direct.tsx:403
+#, fuzzy
+msgid "Pleo Account"
+msgstr "Pleo Account"
 
 #: app/scripts/modals/reset-password/reset-password.tsx:61
 #, fuzzy
@@ -8711,6 +8743,14 @@ msgstr "Speichern"
 #, fuzzy
 msgid "Save address"
 msgstr "Adresse speichern"
+
+#: src/App.js:28
+msgid "Saved world"
+msgstr ""
+
+#: src/App.js:29
+msgid "Saved123123 world"
+msgstr "Gespeichert123123 Welt"
 
 #: app/scripts/pages/auth/team/members/member-edit.tsx:308
 #, fuzzy
