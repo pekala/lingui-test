@@ -1,4 +1,7 @@
-on: push
+on: 
+    push:
+    pull_request:
+      types: [labeled]
 name: Push transl1231ations
 jobs:
     merge:
