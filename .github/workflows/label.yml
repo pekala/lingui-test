@@ -46,11 +46,11 @@ jobs:
           id: comment
           run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c16-)"
         - name: Get branch name
-          if: success()
+          if: steps.check_pr_labels.outputs.result == 'true' && (github.event.label.name == 'start-localisation' || !github.event.label)
           id: branch
           run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
         - name: Lokalise File Push
-          if: success()
+          if: steps.check_pr_labels.outputs.result == 'true' && (github.event.label.name == 'start-localisation' || !github.event.label)
           uses: pleo-io/actions/lokalise-file-push@v6.0
           with:
             # Api token for the Lokalise account
@@ -67,7 +67,7 @@ jobs:
   
             locales: '["en"]'
         - name: Lokalise create task
-          if: success()
+          if: steps.check_pr_labels.outputs.result == 'true' && (github.event.label.name == 'start-localisation' || !github.event.label)
           uses: pleo-io/actions/lokalise-create-task@v6.0
           with:
             # Api token for the Lokalise account
