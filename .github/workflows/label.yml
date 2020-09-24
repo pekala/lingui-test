@@ -44,7 +44,7 @@ jobs:
         - name: Get short SHA
           if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
           id: comment
-          run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c1-8)"
+          run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c1-8-)"
         - name: Get branch name
           if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
           id: branch
