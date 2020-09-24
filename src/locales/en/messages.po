@@ -66,11 +66,11 @@ msgstr "Buffer zone111"
 msgid "Buffer zongege111"
 msgstr "Buffer zongege111"
 
-#: src/App.js:82
+#: src/App.js:83
 msgid "Crazy Nic!!"
 msgstr "Crazy Nic!!"
 
-#: src/App.js:59
+#: src/App.js:60
 msgid "Fire me"
 msgstr "Fire me"
 
@@ -86,11 +86,11 @@ msgstr "Go gore go"
 msgid "Go hello go"
 msgstr "Go hello go"
 
-#: src/App.js:58
+#: src/App.js:59
 msgid "Google me"
 msgstr "Google me"
 
-#: src/App.js:48
+#: src/App.js:49
 msgid "Hello sir"
 msgstr "Hello sir"
 
@@ -98,11 +98,11 @@ msgstr "Hello sir"
 msgid "Hi guy"
 msgstr "Hi guy"
 
-#: src/App.js:57
+#: src/App.js:58
 msgid "Kiko kiko"
 msgstr "Kiko kiko"
 
-#: src/App.js:88
+#: src/App.js:89
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Last time I had to configure webpack {0,date}"
 
@@ -142,11 +142,11 @@ msgstr "NEW LOsdfsdfsdf CALE"
 msgid "New ride"
 msgstr "New ride"
 
-#: src/App.js:51
+#: src/App.js:52
 msgid "New text"
 msgstr "New text"
 
-#: src/App.js:54
+#: src/App.js:55
 msgid "Next texfefeft"
 msgstr "Next texfefeft"
 
@@ -170,7 +170,7 @@ msgstr "Okey Gffdoogle"
 msgid "Saved123123 world"
 msgstr "Saved123123 world"
 
-#: src/App.js:56
+#: src/App.js:57
 msgid "This hikolp 12312"
 msgstr "This hikolp 12312"
 
@@ -182,9 +182,13 @@ msgstr "This message is translated and has a <0>link</0>"
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr "This message will fallback to {fallbackLang} / {count}!"
 
-#: src/App.js:55
+#: src/App.js:56
 msgid "This time it should work now go kola"
 msgstr "This time it should work now go kola"
+
+#: src/App.js:46
+msgid "Wow, not bad at all"
+msgstr "Wow, not bad at all"
 
 #: src/App.js:26
 msgid "Wow, what push"
@@ -194,6 +198,6 @@ msgstr "Wow, what push"
 msgid "my.custom.id"
 msgstr "Custom ID works"
 
-#: src/App.js:62
+#: src/App.js:63
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"

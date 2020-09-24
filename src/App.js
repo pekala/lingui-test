@@ -43,6 +43,7 @@ const App = () => {
         <Trans>Buffer zongege111</Trans>
         <Trans>Buffer 234</Trans>
         <Trans>Buffer bob kola</Trans>
+        <Trans>Wow, not bad at all</Trans>
       </h1>
       <h1>
         <Trans>Hello sir</Trans>
