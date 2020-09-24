@@ -63,7 +63,7 @@ jobs:
             # The relative file path where language files will be found
             file-path: src/locales/%LANG_ISO%/messages.po
   
-            tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
+            tags: '["pre-release", "sha-${{ steps.comment.outputs.tagname }}"]'
   
             locales: '["en"]'
         - name: Lokalise create task
@@ -78,7 +78,7 @@ jobs:
             project-id: ${{ secrets.LOCALIZE_PROJECT }}
   
             # Tags
-            tags: '["${{ steps.comment.outputs.tagname }}"]'
+            tags: '["sha-${{ steps.comment.outputs.tagname }}"]'
   
             # Name of team from localise
             team-name: Pleo Team
