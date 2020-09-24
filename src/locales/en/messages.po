@@ -66,13 +66,17 @@ msgstr "Buffer zone111"
 msgid "Buffer zongege111"
 msgstr "Buffer zongege111"
 
-#: src/App.js:83
+#: src/App.js:84
 msgid "Crazy Nic!!"
 msgstr "Crazy Nic!!"
 
 #: src/App.js:60
 msgid "Fire me"
 msgstr "Fire me"
+
+#: src/App.js:61
+msgid "Fire me 1"
+msgstr "Fire me 1"
 
 #: src/App.js:36
 msgid "Go go43re go"
@@ -102,7 +106,7 @@ msgstr "Hi guy"
 msgid "Kiko kiko"
 msgstr "Kiko kiko"
 
-#: src/App.js:89
+#: src/App.js:90
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Last time I had to configure webpack {0,date}"
 
@@ -198,6 +202,6 @@ msgstr "Wow, what push"
 msgid "my.custom.id"
 msgstr "Custom ID works"
 
-#: src/App.js:63
+#: src/App.js:64
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
