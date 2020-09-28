@@ -31,12 +31,15 @@ jobs:
       - name: Push changes
         env:
           APP_INSTALLATION_TOKEN: ${{ steps.gettoken.outputs.token }}
+        id: commit
         run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Messages updated"
-          git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+      - name: Run
+        run: ${{ steps.commit.outputs }}
+    #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
     #   - name: Push changes 2
     #     with:
     #       script: |
