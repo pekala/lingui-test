@@ -35,9 +35,12 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Messages updated"
-          git push HEAD:"${GITHUB_REF:11}"
           echo "::set-output name=sha::$(git rev-parse HEAD)"
-
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.comment-branch.outputs.ref }}
       #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - uses: actions/github-script@v3
         with:
