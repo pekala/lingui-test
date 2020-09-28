@@ -1,0 +1,66 @@
+name: Run yarn extract-messages
+
+on: push
+
+jobs:
+  fix_errors:
+    name: Commiting
+    if: contains(github.event.commits[0].message, '-translate-')
+    env:
+      CI: "true"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get yarn cache location
+        id: yarn-cache
+        run: echo "::set-output name=dir::$(yarn cache dir)"
+
+      - name: Restore yarn cache
+        uses: actions/cache@v1
+        with:
+          path: ${{ steps.yarn-cache.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+          registry-url: "https://npm.pkg.github.com"
+
+      - name: Install dependencies
+        run: yarn --frozen-lockfile --ignore-engines --ignore-optional --non-interactive --silent --ignore-scripts --production=false
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GH_REGISTRY_TOKEN }}
+      - uses: navikt/github-app-token-generator@v1
+        id: gettoken
+        with:
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          app-id: ${{ secrets.APP_ID }}
+      - name: Extracting messages
+        run: yarn extract-messages
+      - name: Push changes
+        env:
+          APP_INSTALLATION_TOKEN: ${{ steps.get-token.outputs.token }}
+        run: |
+          git config --global user.email "igor.techweb@gmail.com"
+          git config --global user.name "Igor Dolzhenkov"
+          git add .
+          git commit -m "Messages updated"
+          git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+    #   - name: Push changes 2
+    #     with:
+    #       script: |
+    #         const githubI = await new Octokit({
+    #             auth: steps.gettoken.outputs.token
+    #         })
+    #         await githubI.git.updateRef({
+    #           owner: 'pleo-io',
+    #           repo: github.repository,
+    #           ref: 'heads/chore/ch44690/the-process-when-translations-are-not-required',
+    #           sha: '1f47b3d',
+    #           force: false
+    #         })
