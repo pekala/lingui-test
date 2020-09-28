@@ -131,8 +131,8 @@ msgid "Last time I had to configure webpack {0,date}"
 msgstr "Last time I had to configure webpack {0,date}"
 
 #: src/App.js:24
-msgid "Let's go"
-msgstr "Let's go"
+#~ msgid "Let's go"
+#~ msgstr "Let's go"
 
 #: src/App.js:25
 #~ msgid "Let's go kola"
@@ -141,6 +141,10 @@ msgstr "Let's go"
 #: src/App.js:25
 msgid "Let's go kola_ wefwef"
 msgstr "Let's go kola_ wefwef"
+
+#: src/App.js:24
+msgid "Let's sdfgo"
+msgstr "Let's sdfgo"
 
 #: src/App.js:31
 msgid "Loli"
