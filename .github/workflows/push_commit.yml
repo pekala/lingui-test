@@ -66,6 +66,8 @@ jobs:
                 parents: ["${{ steps.commit.outputs.sha }}"]
             })
 
+            console.log(newCommitDetails);
+
             await github.git.updateRef({
                 owner: 'igorDolzh',
                 repo: "${{ github.event.repository.name }}",
