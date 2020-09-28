@@ -37,7 +37,7 @@ jobs:
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Messages updated"
-      - name: Run
+      - name: Run forestx
         run: ${{ steps.commit.outputs }}
     #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
     #   - name: Push changes 2
