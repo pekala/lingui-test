@@ -51,8 +51,8 @@ jobs:
           script: |
             await github.git.updateRef({
                 owner: 'igorDolzh',
-                repo: 'lingui-test',
-                ref: 'heads/igor-push-messages',
+                repo: "${{ github.repository }}",
+                ref: "heads/${{ steps.branch.outputs.name }}",
                 sha: "${{ steps.commit.outputs.sha }}",
                 force: true
             })
