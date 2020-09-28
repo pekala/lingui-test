@@ -39,17 +39,15 @@ jobs:
           git commit -m "Messages updated"
       - name: Run forestx
         run: ${{ steps.commit.outputs }}
-    #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
-    #   - name: Push changes 2
-    #     with:
-    #       script: |
-    #         const githubI = await new Octokit({
-    #             auth: steps.gettoken.outputs.token
-    #         })
-    #         await githubI.git.updateRef({
-    #           owner: 'pleo-io',
-    #           repo: github.repository,
-    #           ref: 'heads/chore/ch44690/the-process-when-translations-are-not-required',
-    #           sha: '1f47b3d',
-    #           force: false
-    #         })
+      #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+      - uses: actions/github-script@v3
+        with:
+          github-token: ${{steps.gettoken.outputs.token}}
+          script: |
+            await githubI.git.updateRef({
+                owner: 'igorDolzh',
+                repo: github.repository,
+                ref: 'heads/igor-push-messages',
+                sha: '791381c',
+                force: false
+            })

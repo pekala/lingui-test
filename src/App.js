@@ -57,8 +57,8 @@ const App = () => {
         <Trans>This hikolp 12312</Trans>
         <Trans>Kiko kiko</Trans>
         <Trans>Google me</Trans>
-        <Trans>Fire me</Trans>
-        <Trans>Fire me 1</Trans>
+        <Trans>Fir123e me</Trans>
+        <Trans>F231ire me 1</Trans>
         <Trans>Fire me 2</Trans>
         <Trans>Fire me 23</Trans>
         <Trans>Yor</Trans>
