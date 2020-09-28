@@ -10,6 +10,8 @@ jobs:
       CI: "true"
     runs-on: ubuntu-latest
     steps:
+      - name: Debug Action
+        uses: hmarr/debug-action@v1.0.0
       - name: Checkout
         uses: actions/checkout@v1
         with:
