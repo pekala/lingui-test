@@ -41,7 +41,7 @@ jobs:
           git add .
           git commit -m "Messages updated"
           echo "::set-output name=sha::$(git rev-parse HEAD)"
-      #   - name: Push changes
+      #   - name: Push changes32
       #     uses: ad-m/github-push-action@master
       #     with:
       #       github_token: ${{ secrets.GITHUB_TOKEN }}
