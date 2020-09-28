@@ -175,8 +175,12 @@ msgstr "NEW LOsdfsdfsdf CALE"
 #~ msgstr "NEW LdsdsdsdsgfsdfOCALE3232"
 
 #: src/App.js:28
-msgid "NEW LdsdsdsdsgfsdffdfsfOCALE3232"
-msgstr "NEW LdsdsdsdsgfsdffdfsfOCALE3232"
+#~ msgid "NEW LdsdsdsdsgfsdffdfsfOCALE3232"
+#~ msgstr "NEW LdsdsdsdsgfsdffdfsfOCALE3232"
+
+#: src/App.js:28
+msgid "NEW LdsdsdsdsgfsdffdfsffsfdsOCALE3232"
+msgstr "NEW LdsdsdsdsgfsdffdfsffsfdsOCALE3232"
 
 #: src/App.js:23
 #~ msgid "New ride"
