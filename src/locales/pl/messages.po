@@ -56,17 +56,25 @@ msgstr ""
 msgid "Buffer zongege111"
 msgstr ""
 
-#: src/App.js:87
+#: src/App.js:88
 msgid "Crazy Nic!!"
 msgstr "Szalony Nik!!"
 
-#: src/App.js:60
-msgid "Fire me"
+#: src/App.js:61
+msgid "F231ire me 1"
 msgstr ""
 
-#: src/App.js:61
-msgid "Fire me 1"
+#: src/App.js:60
+msgid "Fir123e me"
 msgstr ""
+
+#: src/App.js:60
+#~ msgid "Fire me"
+#~ msgstr ""
+
+#: src/App.js:61
+#~ msgid "Fire me 1"
+#~ msgstr ""
 
 #: src/App.js:62
 msgid "Fire me 2"
@@ -95,6 +103,10 @@ msgstr ""
 msgid "Google me"
 msgstr ""
 
+#: src/App.js:65
+msgid "Hello"
+msgstr ""
+
 #: src/App.js:49
 msgid "Hello sir"
 msgstr ""
@@ -107,7 +119,7 @@ msgstr ""
 msgid "Kiko kiko"
 msgstr ""
 
-#: src/App.js:93
+#: src/App.js:94
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Cośtam cośtam, data: {0,date}"
 
@@ -219,6 +231,6 @@ msgstr ""
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:67
+#: src/App.js:68
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"
