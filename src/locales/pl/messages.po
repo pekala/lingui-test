@@ -170,7 +170,11 @@ msgid "NEW LOsdfsdfsdf CALE"
 msgstr ""
 
 #: src/App.js:28
-msgid "NEW LdsdsdsdsgfsdfOCALE3232"
+#~ msgid "NEW LdsdsdsdsgfsdfOCALE3232"
+#~ msgstr ""
+
+#: src/App.js:28
+msgid "NEW LdsdsdsdsgfsdffdfsfOCALE3232"
 msgstr ""
 
 #: src/App.js:23
