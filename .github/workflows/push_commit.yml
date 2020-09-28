@@ -48,6 +48,6 @@ jobs:
                 owner: 'igorDolzh',
                 repo: 'lingui-test',
                 ref: 'heads/igor-push-messages',
-                sha: '791381c',
+                sha: '06c758adffa0fc91da4d30b9ef4740209b1b30f7',
                 force: false
             })
