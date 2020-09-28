@@ -39,7 +39,7 @@ jobs:
       #   - name: Run forestx
       #     run: ${{ steps.commit.outputs }}
       #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
-      - name: Hello Run
+      - uses: actions/github-script@v3
         with:
           github-token: ${{steps.gettoken.outputs.token}}
           script: |
