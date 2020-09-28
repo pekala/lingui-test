@@ -53,7 +53,7 @@ jobs:
           script: |
             await github.git.updateRef({
                 owner: 'igorDolzh',
-                repo: "${{ github.repository }}",
+                repo: "${{ github.event.repository.name }}",
                 ref: "heads/${{ steps.branch.outputs.name }}",
                 sha: "${{ steps.commit.outputs.sha }}",
                 force: true
