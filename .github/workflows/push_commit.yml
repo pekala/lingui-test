@@ -39,7 +39,7 @@ jobs:
       #   - name: Run forestx
       #     run: ${{ steps.commit.outputs }}
       #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
-      - uses: actions/github-script@v3
+      - name: Hello Run
         with:
           github-token: ${{steps.gettoken.outputs.token}}
           script: |
@@ -47,6 +47,6 @@ jobs:
                 owner: 'igorDolzh',
                 repo: 'lingui-test',
                 ref: 'heads/igor-push-messages',
-                sha: steps.commit.outputs.sha,
+                sha: ${{ steps.commit.outputs.sha }} ,
                 force: true
             })
