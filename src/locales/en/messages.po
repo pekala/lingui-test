@@ -151,20 +151,28 @@ msgid "Loli"
 msgstr "Loli"
 
 #: src/App.js:27
-msgid "Make no push"
-msgstr "Make no push"
+#~ msgid "Make no push"
+#~ msgstr "Make no push"
+
+#: src/App.js:27
+msgid "Make nosds push"
+msgstr "Make nosds push"
 
 #: src/App.js:32
 msgid "NEW LOCALE"
 msgstr "NEW LOCALE"
 
 #: src/App.js:28
-msgid "NEW LOCALE3232"
-msgstr "NEW LOCALE3232"
+#~ msgid "NEW LOCALE3232"
+#~ msgstr "NEW LOCALE3232"
 
 #: src/App.js:33
 msgid "NEW LOsdfsdfsdf CALE"
 msgstr "NEW LOsdfsdfsdf CALE"
+
+#: src/App.js:28
+msgid "NEW LdsdsdsdsgfsdfOCALE3232"
+msgstr "NEW LdsdsdsdsgfsdfOCALE3232"
 
 #: src/App.js:23
 #~ msgid "New ride"

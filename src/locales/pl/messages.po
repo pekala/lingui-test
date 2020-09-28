@@ -150,7 +150,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/App.js:27
-msgid "Make no push"
+#~ msgid "Make no push"
+#~ msgstr ""
+
+#: src/App.js:27
+msgid "Make nosds push"
 msgstr ""
 
 #: src/App.js:32
@@ -158,11 +162,15 @@ msgid "NEW LOCALE"
 msgstr ""
 
 #: src/App.js:28
-msgid "NEW LOCALE3232"
-msgstr ""
+#~ msgid "NEW LOCALE3232"
+#~ msgstr ""
 
 #: src/App.js:33
 msgid "NEW LOsdfsdfsdf CALE"
+msgstr ""
+
+#: src/App.js:28
+msgid "NEW LdsdsdsdsgfsdfOCALE3232"
 msgstr ""
 
 #: src/App.js:23
