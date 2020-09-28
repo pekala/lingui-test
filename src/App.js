@@ -25,7 +25,7 @@ const App = () => {
         <Trans>Let's go kola_ wefwef</Trans>
         <Trans>Wow, what push</Trans>
         <Trans>Make nosds push</Trans>
-        <Trans>NEW LdsdsdsdsgfsdfOCALE3232</Trans>
+        <Trans>NEW LdsdsdsdsgfsdffdfsfOCALE3232</Trans>
         <Trans>Saved123123 world</Trans>
         <Trans>Hi guy</Trans>
         <Trans>Loli</Trans>
