@@ -46,7 +46,7 @@ jobs:
           script: |
             await github.git.updateRef({
                 owner: 'igorDolzh',
-                repo: github.repository,
+                repo: 'lingui-test',
                 ref: 'heads/igor-push-messages',
                 sha: '791381c',
                 force: false
