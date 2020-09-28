@@ -163,8 +163,12 @@ msgid "NEW LOsdfsdfsdf CALE"
 msgstr "NEW LOsdfsdfsdf CALE"
 
 #: src/App.js:23
-msgid "New ride"
-msgstr "New ride"
+#~ msgid "New ride"
+#~ msgstr "New ride"
+
+#: src/App.js:23
+msgid "New ride wsdf weerf"
+msgstr "New ride wsdf weerf"
 
 #: src/App.js:52
 msgid "New text"

@@ -162,7 +162,11 @@ msgid "NEW LOsdfsdfsdf CALE"
 msgstr ""
 
 #: src/App.js:23
-msgid "New ride"
+#~ msgid "New ride"
+#~ msgstr ""
+
+#: src/App.js:23
+msgid "New ride wsdf weerf"
 msgstr ""
 
 #: src/App.js:52

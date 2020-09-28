@@ -41,20 +41,33 @@ jobs:
           git add .
           git commit -m "Messages updated"
           echo "::set-output name=sha::$(git rev-parse HEAD)"
-      #   - name: Push changes32
-      #     uses: ad-m/github-push-action@master
-      #     with:
-      #       github_token: ${{ secrets.GITHUB_TOKEN }}
-      #       branch: ${{ steps.branch.outputs.name }}
-      #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+      - name: Push changes32
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ steps.branch.outputs.name }}
       - uses: actions/github-script@v3
         with:
           github-token: ${{steps.gettoken.outputs.token}}
           script: |
+            const commitDetails = await github.git.getCommit({
+                owner: 'igorDolzh',
+                repo: "${{ github.event.repository.name }}",
+                commit_sha:"${{ steps.commit.outputs.sha }}",
+            })
+
+            const newCommitDetails = await github.git.createCommit({
+                owner: 'igorDolzh',
+                repo: "${{ github.event.repository.name }}",
+                message: 'new commit',
+                tree: commitDetails.tree.sha,
+                parents: ["${{ steps.commit.outputs.sha }}"]
+            })
+
             await github.git.updateRef({
                 owner: 'igorDolzh',
                 repo: "${{ github.event.repository.name }}",
                 ref: "heads/${{ steps.branch.outputs.name }}",
-                sha: '01ae2b5642ab2c79833a58d3fbbd73c25a9fa2a9',
+                sha: newCommitDetails.sha,
                 force: true
             })
