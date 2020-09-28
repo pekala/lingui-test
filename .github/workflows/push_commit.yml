@@ -41,11 +41,11 @@ jobs:
           git add .
           git commit -m "Messages updated"
           echo "::set-output name=sha::$(git rev-parse HEAD)"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.branch.outputs.name }}
+      #   - name: Push changes
+      #     uses: ad-m/github-push-action@master
+      #     with:
+      #       github_token: ${{ secrets.GITHUB_TOKEN }}
+      #       branch: ${{ steps.branch.outputs.name }}
       #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - uses: actions/github-script@v3
         with:
