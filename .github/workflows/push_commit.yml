@@ -55,6 +55,6 @@ jobs:
                 owner: 'igorDolzh',
                 repo: "${{ github.event.repository.name }}",
                 ref: "heads/${{ steps.branch.outputs.name }}",
-                sha: "${{ steps.commit.outputs.sha }}",
+                sha: '01ae2b5642ab2c79833a58d3fbbd73c25a9fa2a9',
                 force: true
             })
