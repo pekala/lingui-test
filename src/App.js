@@ -20,7 +20,7 @@ const App = () => {
         <Trans id="my.custom.id">Custom ID works</Trans>
       </h1>
       <h1>
-        <Trans>New ride</Trans>
+        <Trans>New ride wsdf we</Trans>
         <Trans>Let's go</Trans>
         <Trans>Let's go kola_ wefwef</Trans>
         <Trans>Wow, what push</Trans>
