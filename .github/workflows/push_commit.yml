@@ -47,6 +47,6 @@ jobs:
                 owner: 'igorDolzh',
                 repo: 'lingui-test',
                 ref: 'heads/igor-push-messages',
-                sha: ${{ steps.commit.outputs.sha }} ,
+                sha: "${{ steps.commit.outputs.sha }}",
                 force: true
             })
