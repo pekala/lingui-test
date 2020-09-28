@@ -62,7 +62,7 @@ jobs:
                 owner: 'igorDolzh',
                 repo: "${{ github.event.repository.name }}",
                 message: 'new commit',
-                tree: commitDetails.commit.tree.sha,
+                tree: commitDetails.data.tree.sha,
                 parents: ["${{ steps.commit.outputs.sha }}"]
             })
 
