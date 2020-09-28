@@ -26,10 +26,9 @@ jobs:
         with:
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           app-id: ${{ secrets.APP_ID }}
-      - uses: xt0rted/pull-request-comment-branch@v1
-        id: comment-branch
-        with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Get branch name
+        id: branch
+        run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
       - name: Extracting messages2
         run: npx lingui extract
       - name: Push changes
@@ -44,7 +43,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.comment-branch.outputs.ref }}
+          branch: ${{ steps.branch.outputs.name }}
       #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
       - uses: actions/github-script@v3
         with:
