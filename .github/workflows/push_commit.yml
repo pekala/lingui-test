@@ -44,7 +44,7 @@ jobs:
         with:
           github-token: ${{steps.gettoken.outputs.token}}
           script: |
-            await githubI.git.updateRef({
+            await github.git.updateRef({
                 owner: 'igorDolzh',
                 repo: github.repository,
                 ref: 'heads/igor-push-messages',
