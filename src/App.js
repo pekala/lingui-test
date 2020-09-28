@@ -62,6 +62,7 @@ const App = () => {
         <Trans>Fire me 2</Trans>
         <Trans>Fire me 23</Trans>
         <Trans>Yor</Trans>
+        <Trans>Hello</Trans>
       </h1>
       <p>
         <Plural

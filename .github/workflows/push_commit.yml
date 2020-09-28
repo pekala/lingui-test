@@ -29,14 +29,13 @@ jobs:
       - name: Extracting messages2
         run: npx lingui extract
       - name: Push changes
-        env:
-          APP_INSTALLATION_TOKEN: ${{ steps.gettoken.outputs.token }}
         id: commit
         run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
           git commit -m "Messages updated"
+          echo "::set-output name=sha::$(git rev-parse HEAD)"
       #   - name: Run forestx
       #     run: ${{ steps.commit.outputs }}
       #   git push https://igorDolzh:$APP_INSTALLATION_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
@@ -48,6 +47,6 @@ jobs:
                 owner: 'igorDolzh',
                 repo: 'lingui-test',
                 ref: 'heads/igor-push-messages',
-                sha: '06c758adffa0fc91da4d30b9ef4740209b1b30f7',
+                sha: steps.commit.outputs.sha,
                 force: true
             })
