@@ -70,6 +70,6 @@ jobs:
                 owner: 'igorDolzh',
                 repo: "${{ github.event.repository.name }}",
                 ref: "heads/${{ steps.branch.outputs.name }}",
-                sha: newCommitDetails.sha,
+                sha: newCommitDetails.data.sha,
                 force: true
             })
