@@ -12,10 +12,6 @@ jobs:
     steps:
       - name: Debug Action
         uses: hmarr/debug-action@v1.0.0
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          github-token: ${{steps.gettoken.outputs.token}}
       - name: Setup node
         uses: actions/setup-node@v1
         with:
@@ -28,6 +24,10 @@ jobs:
         with:
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           app-id: ${{ secrets.APP_ID }}
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          github-token: ${{steps.gettoken.outputs.token}}
       - name: Get branch name
         id: branch
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
