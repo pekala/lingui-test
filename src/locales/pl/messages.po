@@ -112,7 +112,11 @@ msgid "Hello sir"
 msgstr ""
 
 #: src/App.js:30
-msgid "Hi guy"
+#~ msgid "Hi guy"
+#~ msgstr ""
+
+#: src/App.js:30
+msgid "Hifwef guy"
 msgstr ""
 
 #: src/App.js:58
