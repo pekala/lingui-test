@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [synchronize, labeled]
+    types: [labeled]
 name: Push transl1231ations
 jobs:
   merge:
