@@ -31,7 +31,7 @@ jobs:
         with:
           hasSome: "start-localisation"
       - name: See result
-        run: echo "${{ steps.check_pr_labels.outputs.result }}"
+        run: echo "${{ steps.check_pr_labels.outputs.passed }}"
       # # Find the PR associated with this push, if there is one.
       # - uses: jwalton/gh-find-current-pr@v1
       #   id: findPr
@@ -40,15 +40,15 @@ jobs:
       # This will echo "Your PR is 7", or be skipped if there is no current PR.
       # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
       - name: Get short SHA
-        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         id: comment
         run: echo "::set-output name=tagname::$(echo ${GITHUB_SHA} | cut -c1-8)"
       - name: Get branch name
-        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         id: branch
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
       - name: Lokalise File Push
-        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         uses: pleo-io/actions/lokalise-file-push@v6.0
         with:
           # Api token for the Lokalise account
@@ -65,7 +65,7 @@ jobs:
 
           locales: '["en"]'
       - name: Lokalise create task
-        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         uses: pleo-io/actions/lokalise-create-task@v6.0
         with:
           # Api token for the Lokalise account
