@@ -34,6 +34,8 @@ jobs:
       - name: Extracting messages2
         run: npx lingui extract
       - name: Push
+        with:
+          github-token: ${{steps.gettoken.outputs.token}}
         run: |
           npx lingui extract
           git config --global user.email "igor.techweb@gmail.com"
