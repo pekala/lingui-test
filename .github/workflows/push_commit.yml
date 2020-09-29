@@ -42,6 +42,7 @@ jobs:
           git commit -m "Messages updated"
           echo "::set-output name=sha::$(git rev-parse HEAD)"
       - name: Push changes32
+        if: success()
         uses: ad-m/github-push-action@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -63,7 +64,7 @@ jobs:
                 repo: "${{ github.event.repository.name }}",
                 message: 'new commit',
                 tree: commitDetails.data.tree.sha,
-                parents: ["${{ steps.commit.outputs.sha }}"]
+                parents: ["${{ github.event.after }}"]
             })
 
             console.log(newCommitDetails);
