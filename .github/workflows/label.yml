@@ -82,7 +82,7 @@ jobs:
           team-name: Pleo Team
 
           # List of email for task assignee
-          assignee-email-list: "${{secrets.ASSINE}}"
+          assignee-email-list: ${{secrets.ASSINE}}
 
           # Task title
           task-title: ${{ steps.findPr.outputs.title }}
