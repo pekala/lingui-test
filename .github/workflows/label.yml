@@ -1,6 +1,6 @@
 on:
   pull_request:
-    types: [labeled]
+    types: [synchronize, labeled]
 name: Push transl1231ations
 jobs:
   merge:
@@ -24,6 +24,7 @@ jobs:
         env:
           PR: ${{ steps.findPr.outputs.pr }}
       # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
+
       - name: Check PR labels action step
         id: check_pr_labels
         uses: danielchabr/pr-has-one-of-labels@master
