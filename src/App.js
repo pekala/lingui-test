@@ -36,7 +36,7 @@ const App = () => {
         <Trans>Go go43re go</Trans>
         <Trans>Go hello go</Trans>
         <Trans>13 Nice</Trans>
-        <Trans>Buffer zone</Trans>
+        <Trans>Buffer 13123 zone</Trans>
         <Trans>Buffer zone 123123 123 123 123 </Trans>
         <Trans>Buffer zone111</Trans>
         <Trans>Buffer eger</Trans>

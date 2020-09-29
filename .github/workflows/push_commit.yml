@@ -33,46 +33,55 @@ jobs:
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
       - name: Extracting messages2
         run: npx lingui extract
-      - name: Push changes
-        id: commit
-        run: |
+      - uses: actions/checkout@v2
+        with:
+          github-token: ${{steps.gettoken.outputs.token}}
+      - run: |
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
-          git commit -m "Messages updated"
-          echo "::set-output name=sha::$(git rev-parse HEAD)"
-      - name: Push changes32
-        if: success()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.branch.outputs.name }}
-      - uses: actions/github-script@v3
-        with:
-          github-token: ${{steps.gettoken.outputs.token}}
-          script: |
-            const commitDetails = await github.git.getCommit({
-                owner: 'igorDolzh',
-                repo: "${{ github.event.repository.name }}",
-                commit_sha:"${{ steps.commit.outputs.sha }}",
-            })
+          git commit -m "Messages updated -new-"
+          git push
+    #   - name: Push changes
+    #     id: commit
+    #     run: |
+    #       git config --global user.email "igor.techweb@gmail.com"
+    #       git config --global user.name "Igor Dolzhenkov"
+    #       git add .
+    #       git commit -m "Messages updated"
+    #       echo "::set-output name=sha::$(git rev-parse HEAD)"
+    #   - name: Push changes32
+    #     if: success()
+    #     uses: ad-m/github-push-action@master
+    #     with:
+    #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    #       branch: ${{ steps.branch.outputs.name }}
+    #   - uses: actions/github-script@v3
+    #     with:
+    #       github-token: ${{steps.gettoken.outputs.token}}
+    #       script: |
+    #         const commitDetails = await github.git.getCommit({
+    #             owner: 'igorDolzh',
+    #             repo: "${{ github.event.repository.name }}",
+    #             commit_sha:"${{ steps.commit.outputs.sha }}",
+    #         })
 
-            console.log(commitDetails);
+    #         console.log(commitDetails);
 
-            const newCommitDetails = await github.git.createCommit({
-                owner: 'igorDolzh',
-                repo: "${{ github.event.repository.name }}",
-                message: 'new commit',
-                tree: commitDetails.data.tree.sha,
-                parents: ["${{ github.event.after }}"]
-            })
+    #         const newCommitDetails = await github.git.createCommit({
+    #             owner: 'igorDolzh',
+    #             repo: "${{ github.event.repository.name }}",
+    #             message: 'new commit',
+    #             tree: commitDetails.data.tree.sha,
+    #             parents: ["${{ github.event.after }}"]
+    #         })
 
-            console.log(newCommitDetails);
+    #         console.log(newCommitDetails);
 
-            await github.git.updateRef({
-                owner: 'igorDolzh',
-                repo: "${{ github.event.repository.name }}",
-                ref: "heads/${{ steps.branch.outputs.name }}",
-                sha: newCommitDetails.data.sha,
-                force: true
-            })
+    #         await github.git.updateRef({
+    #             owner: 'igorDolzh',
+    #             repo: "${{ github.event.repository.name }}",
+    #             ref: "heads/${{ steps.branch.outputs.name }}",
+    #             sha: newCommitDetails.data.sha,
+    #             force: true
+    #         })
