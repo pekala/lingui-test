@@ -24,20 +24,13 @@ jobs:
         with:
           private-key: ${{ secrets.APP_PRIVATE_KEY }}
           app-id: ${{ secrets.APP_ID }}
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          github-token: ${{steps.gettoken.outputs.token}}
       - name: Get branch name
         id: branch
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
-      - name: Extracting messages2
-        run: npx lingui extract
-      - name: Checkout & Push
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         with:
           github-token: ${{steps.gettoken.outputs.token}}
-        run: |
+      - run: |
           npx lingui extract
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
