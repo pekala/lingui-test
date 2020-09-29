@@ -36,7 +36,7 @@ jobs:
         with:
           github-token: ${{steps.gettoken.outputs.token}}
       - run: |
-          npx lingui extract
+          yarn extract
           git config --global user.email "igor.techweb@gmail.com"
           git config --global user.name "Igor Dolzhenkov"
           git add .
