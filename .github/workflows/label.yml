@@ -24,13 +24,11 @@ jobs:
         env:
           PR: ${{ steps.findPr.outputs.pr }}
       # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
-
       - name: Check PR labels action step
         id: check_pr_labels
-        uses: shioyang/check-pr-labels-on-push-action@v1.0.3
+        uses: danielchabr/pr-has-one-of-labels@master
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          labels: '["start-localisation"]'
+          hasSome: "start-localisation"
       - name: See result
         run: echo "${{ steps.check_pr_labels.outputs.result }}"
       # # Find the PR associated with this push, if there is one.
