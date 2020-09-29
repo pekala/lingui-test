@@ -27,7 +27,7 @@ jobs:
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
       - uses: actions/checkout@v2
         with:
-          github-token: ${{steps.gettoken.outputs.token}}
+          token: ${{steps.gettoken.outputs.token}}
       - run: |
           yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
           npx lingui extract
