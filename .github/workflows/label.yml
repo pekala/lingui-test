@@ -1,104 +1,95 @@
-on: 
-    push:
-    pull_request:
-      types: [labeled]
+on:
+  pull_request:
+    types: [synchronize, labeled]
 name: Push transl1231ations
 jobs:
-    merge:
-      name: Push translations
-      runs-on: ubuntu-latest
-      steps:
-        - name: Debug Action
-          uses: hmarr/debug-action@v1.0.0
-        - uses: actions/checkout@v2
-          if: success()
-          with:
-            ref: ${{ steps.comment-branch.outputs.ref }}
-        # Find the PR associated with this push, if there is one.
-        - uses: jwalton/gh-find-current-pr@v1
-          id: findPr
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-        # This will echo "Your PR is 7", or be skipped if there is no current PR.
-        - run: echo "Your PR is ${PR} ${{steps.findPr.outputs.title }} ${{steps.findPr.outputs.body }} ${{github.event.after}}"
-          if: success() && steps.findPr.outputs.number
-          env:
-            PR: ${{ steps.findPr.outputs.pr }}
-        # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
+  merge:
+    name: Push translations
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug Action
+        uses: hmarr/debug-action@v1.0.0
+      - uses: actions/checkout@v2
+        if: success()
+        with:
+          ref: ${{ steps.comment-branch.outputs.ref }}
+      # Find the PR associated with this push, if there is one.
+      - uses: jwalton/gh-find-current-pr@v1
+        id: findPr
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      # This will echo "Your PR is 7", or be skipped if there is no current PR.
+      - run: echo "Your PR is ${PR} ${{steps.findPr.outputs.title }} ${{steps.findPr.outputs.body }} ${{github.event.after}}"
+        if: success() && steps.findPr.outputs.number
+        env:
+          PR: ${{ steps.findPr.outputs.pr }}
+      # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.label.name }} ${{ github.event.issue.body }}"
 
-        - name: Check PR labels action step
-          id: check_pr_labels
-          uses: shioyang/check-pr-labels-on-push-action@v1.0.3
-          with:
-            github-token: ${{ secrets.GITHUB_TOKEN }}
-            labels: '["start-localisation"]'
-        - name: See result
-          run: echo "${{ steps.check_pr_labels.outputs.result }}"
-        # # Find the PR associated with this push, if there is one.
-        # - uses: jwalton/gh-find-current-pr@v1
-        #   id: findPr
-        #   with:
-        #     github-token: ${{ secrets.GITHUB_TOKEN }}
-        # This will echo "Your PR is 7", or be skipped if there is no current PR.
-        # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
-        - name: Get short SHA
-          if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
-          id: comment
-          run: echo "::set-output name=tagname::$(echo ${GITHUB_SHA} | cut -c1-8)"
-        - name: Get branch name
-          if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
-          id: branch
-          run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
-        - name: Lokalise File Push
-          if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
-          uses: pleo-io/actions/lokalise-file-push@v6.0
-          with:
-            # Api token for the Lokalise account
-            # with read/write access to the project
-            api-token: ${{ secrets.LOCALIZE_TOKEN }}
-  
-            # ID of the project to sync
-            project-id: ${{ secrets.LOCALIZE_PROJECT }}
-  
-            # The relative file path where language files will be found
-            file-path: src/locales/%LANG_ISO%/messages.po
-  
-            tags: '["sha-${{ steps.comment.outputs.tagname }}"]'
-  
-            locales: '["en"]'
-        - name: Lokalise create task
-          if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
-          uses: pleo-io/actions/lokalise-create-task@v6.0
-          with:
-            # Api token for the Lokalise account
-            # with read/write access to the project
-            api-token: ${{ secrets.LOCALIZE_TOKEN }}
-  
-            # ID of the project to sync
-            project-id: ${{ secrets.LOCALIZE_PROJECT }}
-  
-            # Tags
-            tags: '["sha-${{ steps.comment.outputs.tagname }}"]'
-  
-            # Name of team from localise
-            team-name: Pleo Team
-  
-            # List of email for task assignee
-            assignee-email-list: '{
-              "en": ["igor@pleo.io"],
-              "fr": ["igor@pleo.io"],
-              "de": ["igor@pleo.io"],
-              "es": ["igor@pleo.io"],
-              "sv": ["igor@pleo.io"],
-              "da": ["igor@pleo.io"]
-            }'
-  
-            # Task title
-            task-title: ${{ steps.findPr.outputs.title }}
-  
-            # Task description
-            task-description: '${{ steps.findPr.outputs.body }} <repo>${{ github.event.repository.name }}</repo> <ref>${{ steps.branch.outputs.name }}</ref>'
-  
-            # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
-            task-options: '{"auto_close_task": true, "auto_close_languages": true}'
-  
+      - name: Check PR labels action step
+        id: check_pr_labels
+        uses: shioyang/check-pr-labels-on-push-action@v1.0.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          labels: '["start-localisation"]'
+      - name: See result
+        run: echo "${{ steps.check_pr_labels.outputs.result }}"
+      # # Find the PR associated with this push, if there is one.
+      # - uses: jwalton/gh-find-current-pr@v1
+      #   id: findPr
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      # This will echo "Your PR is 7", or be skipped if there is no current PR.
+      # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
+      - name: Get short SHA
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        id: comment
+        run: echo "::set-output name=tagname::$(echo ${GITHUB_SHA} | cut -c1-8)"
+      - name: Get branch name
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        id: branch
+        run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
+      - name: Lokalise File Push
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        uses: pleo-io/actions/lokalise-file-push@v6.0
+        with:
+          # Api token for the Lokalise account
+          # with read/write access to the project
+          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+          # ID of the project to sync
+          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+          # The relative file path where language files will be found
+          file-path: src/locales/%LANG_ISO%/messages.po
+
+          tags: '["sha-${{ steps.comment.outputs.tagname }}"]'
+
+          locales: '["en"]'
+      - name: Lokalise create task
+        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.result == 'true')
+        uses: pleo-io/actions/lokalise-create-task@v6.0
+        with:
+          # Api token for the Lokalise account
+          # with read/write access to the project
+          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+          # ID of the project to sync
+          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+          # Tags
+          tags: '["sha-${{ steps.comment.outputs.tagname }}"]'
+
+          # Name of team from localise
+          team-name: Pleo Team
+
+          # List of email for task assignee
+          assignee-email-list: "${{secrets.ASSINE}}"
+
+          # Task title
+          task-title: ${{ steps.findPr.outputs.title }}
+
+          # Task description
+          task-description: "${{ steps.findPr.outputs.body }} <repo>${{ github.event.repository.name }}</repo> <ref>${{ steps.branch.outputs.name }}</ref>"
+
+          # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
+          task-options: '{"auto_close_task": true, "auto_close_languages": true}'

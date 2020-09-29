@@ -27,7 +27,7 @@ const App = () => {
         <Trans>Make nosds push</Trans>
         <Trans>NEW LdsdsdsdsgfsdffdfsffsfdsfdfdfsdsdsafsdfsfOCALE3232</Trans>
         <Trans>Saved123123 world</Trans>
-        <Trans>Hifwef guy</Trans>
+        <Trans>Hifweffef guy</Trans>
         <Trans>Loli</Trans>
         <Trans>NEW LOCALE</Trans>
         <Trans>NEW LOsdfsdfsdf CALE</Trans>
