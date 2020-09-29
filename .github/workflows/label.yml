@@ -39,7 +39,7 @@ jobs:
       #     github-token: ${{ secrets.GITHUB_TOKEN }}
       # This will echo "Your PR is 7", or be skipped if there is no current PR.
       # - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
-      - name: Get short SHA
+      - name: Get short SHA1
         if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         id: comment
         run: echo "::set-output name=tagname::$(echo ${GITHUB_SHA} | cut -c1-8)"
