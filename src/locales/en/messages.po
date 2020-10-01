@@ -166,8 +166,12 @@ msgid "Let's sdfgo"
 msgstr "Let's sdfgo"
 
 #: src/App.js:25
-msgid "Let's sdfgo hello"
-msgstr "Let's sdfgo hello"
+#~ msgid "Let's sdfgo hello"
+#~ msgstr "Let's sdfgo hello"
+
+#: src/App.js:25
+msgid "Let's sdfgo hello sds df"
+msgstr "Let's sdfgo hello sds df"
 
 #: src/App.js:31
 #~ msgid "Loli"

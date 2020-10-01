@@ -22,7 +22,7 @@ const App = () => {
       <h1>
         <Trans>New ride wsdf weerf</Trans>
         <Trans>Let's sdfgo</Trans>
-        <Trans>Let's sdfgo hello</Trans>
+        <Trans>Let's sdfgo hello sds df</Trans>
         <Trans>Let's go kola_ wefwef</Trans>
         <Trans>Wow, what push</Trans>
         <Trans>Make nosds push</Trans>
