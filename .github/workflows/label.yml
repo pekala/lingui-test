@@ -49,7 +49,8 @@ jobs:
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
       - name: Lokalise File Push
         if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
-        uses: pleo-io/actions/lokalise-file-push@v6.0
+        uses: igorDolzh/lokalise-file-push@v0.1.0
+        id: lokalise_push
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -61,11 +62,11 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tags: '["sha-${{ steps.comment.outputs.tagname }}"]'
+          tag: 'sha-${{ steps.comment.outputs.tagname }}'
 
           locales: '["en"]'
       - name: Lokalise create task
-        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
+        if: steps.lokalise_push.outputs.uploaded == 'true' && (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         uses: pleo-io/actions/lokalise-create-task@v6.0
         with:
           # Api token for the Lokalise account
