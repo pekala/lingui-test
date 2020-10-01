@@ -85,7 +85,7 @@ jobs:
           # List of email for task assignee
           assignee-email-list: '{
             "en": ["igor@pleo.io"],
-            "fr": ["igor@pleo.io"],
+            "fr": ["igor@pleo.io"]
           }'
 
             # Task title
