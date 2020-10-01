@@ -22,6 +22,10 @@ msgstr ""
 #~ msgid "Bufefeffer 234"
 #~ msgstr ""
 
+#: src/App.js:39
+msgid "Buffer 13123 zone"
+msgstr ""
+
 #: src/App.js:44
 msgid "Buffer 234"
 msgstr ""
@@ -41,8 +45,8 @@ msgid "Buffer eger"
 msgstr ""
 
 #: src/App.js:39
-msgid "Buffer zone"
-msgstr ""
+#~ msgid "Buffer zone"
+#~ msgstr ""
 
 #: src/App.js:40
 msgid "Buffer zone 123123 123 123 123"
@@ -119,7 +123,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/App.js:30
-msgid "Hifweffef guy"
+#~ msgid "Hifweffef guy"
+
+#: src/App.js:30
+msgid "Hifweffwfefef guy"
+msgstr ""
 
 #: src/App.js:58
 msgid "Kiko kiko"
@@ -149,7 +157,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/App.js:31
-msgid "Loli"
+#~ msgid "Loli"
+#~ msgstr ""
+
+#: src/App.js:31
+msgid "Lolicdcpwfwefwefe"
 msgstr ""
 
 #~ msgid "Make nefeo push"
@@ -164,12 +176,16 @@ msgid "Make nosds push"
 msgstr ""
 
 #: src/App.js:32
-msgid "NEW LOCALE"
-msgstr ""
+#~ msgid "NEW LOCALE"
+#~ msgstr ""
 
 #: src/App.js:28
 #~ msgid "NEW LOCALE3232"
 #~ msgstr ""
+
+#: src/App.js:32
+msgid "NEW LOCALEsd fsdf"
+msgstr ""
 
 #: src/App.js:33
 msgid "NEW LOsdfsdfsdf CALE"

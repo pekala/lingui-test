@@ -38,6 +38,10 @@ msgstr "13 Nice"
 #~ msgid "142342342343 2223423423423423423345345345422344324234234423434234"
 #~ msgstr "13 23423423423423345345232342234243443234234234234"
 
+#: src/App.js:39
+msgid "Buffer 13123 zone"
+msgstr "Buffer 13123 zone"
+
 #: src/App.js:44
 msgid "Buffer 234"
 msgstr "Buffer 234"
@@ -51,8 +55,8 @@ msgid "Buffer eger"
 msgstr "Buffer eger"
 
 #: src/App.js:39
-msgid "Buffer zone"
-msgstr "Buffer zone"
+#~ msgid "Buffer zone"
+#~ msgstr "Buffer zone"
 
 #: src/App.js:40
 msgid "Buffer zone 123123 123 123 123"
@@ -126,8 +130,12 @@ msgstr "Hello sir"
 #~ msgstr "Hifwef guy"
 
 #: src/App.js:30
-msgid "Hifweffef guy"
-msgstr "Hifweffef guy"
+#~ msgid "Hifweffef guy"
+#~ msgstr "Hifweffef guy"
+
+#: src/App.js:30
+msgid "Hifweffwfefef guy"
+msgstr "Hifweffwfefef guy"
 
 #: src/App.js:58
 msgid "Kiko kiko"
@@ -154,8 +162,12 @@ msgid "Let's sdfgo"
 msgstr "Let's sdfgo"
 
 #: src/App.js:31
-msgid "Loli"
-msgstr "Loli"
+#~ msgid "Loli"
+#~ msgstr "Loli"
+
+#: src/App.js:31
+msgid "Lolicdcpwfwefwefe"
+msgstr "Lolicdcpwfwefwefe"
 
 #: src/App.js:27
 #~ msgid "Make no push"
@@ -166,12 +178,16 @@ msgid "Make nosds push"
 msgstr "Make nosds push"
 
 #: src/App.js:32
-msgid "NEW LOCALE"
-msgstr "NEW LOCALE"
+#~ msgid "NEW LOCALE"
+#~ msgstr "NEW LOCALE"
 
 #: src/App.js:28
 #~ msgid "NEW LOCALE3232"
 #~ msgstr "NEW LOCALE3232"
+
+#: src/App.js:32
+msgid "NEW LOCALEsd fsdf"
+msgstr "NEW LOCALEsd fsdf"
 
 #: src/App.js:33
 msgid "NEW LOsdfsdfsdf CALE"
