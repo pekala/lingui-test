@@ -66,7 +66,7 @@ jobs:
 
     #       locales: '["en"]'
       - name: Lokalise create task
-        uses: igorDolzh/lokalise-file-push@0.0.12
+        uses: igorDolzh/lokalise-file-push@0.0.13
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
