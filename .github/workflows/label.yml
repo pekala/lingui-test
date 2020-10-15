@@ -47,27 +47,27 @@ jobs:
         if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
         id: branch
         run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
-      - name: Lokalise File Push
-        if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
-        uses: igorDolzh/lokalise-file-push@0.2.4
-        id: lokalise_push
-        with:
-          # Api token for the Lokalise account
-          # with read/write access to the project
-          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+    #   - name: Lokalise File Push
+    #     if: (github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true')
+    #     uses: igorDolzh/lokalise-file-push@0.2.4
+    #     id: lokalise_push
+    #     with:
+    #       # Api token for the Lokalise account
+    #       # with read/write access to the project
+    #       api-token: ${{ secrets.LOCALIZE_TOKEN }}
 
-          # ID of the project to sync
-          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+    #       # ID of the project to sync
+    #       project-id: ${{ secrets.LOCALIZE_PROJECT }}
 
-          # The relative file path where language files will be found
-          file-path: src/locales/%LANG_ISO%/messages.po
+    #       # The relative file path where language files will be found
+    #       file-path: src/locales/%LANG_ISO%/messages.po
 
-          tag: 'sha-${{ steps.comment.outputs.tagname }}'
+    #       tag: 'sha-${{ steps.comment.outputs.tagname }}'
 
-          locales: '["en"]'
+    #       locales: '["en"]'
       - name: Lokalise create task
         if: steps.lokalise_push.outputs.uploaded == 'true' && ((github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true'))
-        uses: pleo-io/actions/lokalise-create-task@v6.0
+        uses: igorDolzh/lokalise-file-push@0.0.12
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
