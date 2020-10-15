@@ -66,7 +66,6 @@ jobs:
 
     #       locales: '["en"]'
       - name: Lokalise create task
-        if: steps.lokalise_push.outputs.uploaded == 'true' && ((github.event.label && github.event.label.name == 'start-localisation') || (!github.event.label && steps.check_pr_labels.outputs.passed == 'true'))
         uses: igorDolzh/lokalise-file-push@0.0.12
         with:
           # Api token for the Lokalise account
