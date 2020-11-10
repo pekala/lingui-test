@@ -226,8 +226,12 @@ msgstr "NEW LdsdsdsdsgfsdffdfsffsfdsfdfdfsdsdsafsdfsfOCALE3232"
 #~ msgstr "New ride"
 
 #: src/App.js:23
-msgid "New ride wsdf weerf"
-msgstr "New ride wsdf weerf"
+#~ msgid "New ride wsdf weerf"
+#~ msgstr "New ride wsdf weerf"
+
+#: src/App.js:23
+msgid "New ride wsdf weerf {count}"
+msgstr "New ride wsdf weerf {count}"
 
 #: src/App.js:54
 msgid "New text"

@@ -224,7 +224,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/App.js:23
-msgid "New ride wsdf weerf"
+#~ msgid "New ride wsdf weerf"
+#~ msgstr ""
+
+#: src/App.js:23
+msgid "New ride wsdf weerf {count}"
 msgstr ""
 
 #: src/App.js:54
