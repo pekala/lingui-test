@@ -162,7 +162,11 @@ msgstr ""
 #~ msgstr ""
 
 #: src/App.js:25
-msgid "Let's sdfgo hello sds df"
+#~ msgid "Let's sdfgo hello sds df"
+#~ msgstr ""
+
+#: src/App.js:25
+msgid "Let's sdfgo hello sds df {count}"
 msgstr ""
 
 #~ msgid "Letefe's go"
