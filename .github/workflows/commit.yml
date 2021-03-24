@@ -1,42 +1,42 @@
-name: Commit
+# name: Commit Push
 
-on: pull
+# on: push
 
-jobs:
-  fix_errors:
-    name: Commiting
-    env:
-      CI: "true"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-        with:
-          fetch-depth: 1
-      - name: Setup node
-        uses: actions/setup-node@v1
-        with:
-          node-version: "10.x"
-          registry-url: "https://npm.pkg.github.com"
-      - name: Install dependencies
-        run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
-      - name: Extracting!1123 432423423232423423423423 messages
-        run: npx lingui extract
-      - name: Checking for new messages
-        run: git status --porcelain | grep . && exit 1 || exit 0
-      - name: Commiting messages
-        env:
-          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
-        if: failure()
-        run: |
-          git config --global user.email "igor.techweb@gmail.com"
-          git config --global user.name "Igor Dolzhenkov"
-          git add .
-          git commit -m "Locales updat6"
-        # git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
-      - name: Push changes
-        if: failure()
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ steps.comment-branch.outputs.ref }}
+# jobs:
+#   fix_errors:
+#     name: Commiting
+#     env:
+#       CI: "true"
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v1
+#         with:
+#           fetch-depth: 1
+#       - name: Setup node
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: "10.x"
+#           registry-url: "https://npm.pkg.github.com"
+#       - name: Install dependencies
+#         run: yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
+#       - name: Extracting!1123 432423423232423423423423 messages
+#         run: npx lingui extract
+#       - name: Checking for new messages
+#         run: git status --porcelain | grep . && exit 1 || exit 0
+#       - name: Commiting messages
+#         env:
+#           SECRET_TOKEN: ${{ secrets.SECRET_TOKEN_APP }}
+#         if: failure()
+#         run: |
+#           git config --global user.email "igor.techweb@gmail.com"
+#           git config --global user.name "Igor Dolzhenkov"
+#           git add .
+#           git commit -m "Locales updat6"
+#           git push https://igorDolzh:$SECRET_TOKEN@github.com/${{ github.repository }} HEAD:"${GITHUB_REF:11}"
+#       # - name: Push changes
+#       #   if: failure()
+#       #   uses: ad-m/github-push-action@master
+#       #   with:
+#       #     github_token: ${{ secrets.GITHUB_TOKEN }}
+#       #     branch: ${{ steps.comment-branch.outputs.ref }}

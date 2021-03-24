@@ -1420,6 +1420,11 @@ msgstr "Väntar på mer information från %1$s"
 msgid "Awaiting review..."
 msgstr "Väntar på granskning"
 
+#: app/scripts/pages/auth/settings/tags/tag.tsx:332
+#: app/scripts/pages/auth/settings/tags/tag.tsx:334
+msgid "back"
+msgstr "tillbaka"
+
 #: app/scripts/pages/auth/expenses/manage/expenses.tsx:237
 #: app/scripts/pages/auth/pocket/components/reconcile-modal-form-review.tsx:67
 #: app/scripts/pages/auth/pocket/components/reconcile-modal-form.tsx:82
@@ -1429,11 +1434,6 @@ msgstr "Väntar på granskning"
 #: app/scripts/pages/auth/team/plastic-cards/recarding/recarding.tsx:103
 msgid "Back"
 msgstr "Tillbaka"
-
-#: app/scripts/pages/auth/settings/tags/tag.tsx:332
-#: app/scripts/pages/auth/settings/tags/tag.tsx:334
-msgid "back"
-msgstr "tillbaka"
 
 #: app/scripts/pages/auth/team/plastic-cards/order/order.tsx:487
 msgid "Back to plastic cards"
@@ -1663,6 +1663,10 @@ msgstr ""
 
 #: src/App.js:33
 msgid "Buffer zone"
+msgstr ""
+
+#: src/App.js:39
+msgid "Buffer zone 123123 123 123 123"
 msgstr ""
 
 #: src/App.js:34
@@ -4184,6 +4188,10 @@ msgstr "Hej"
 msgid "Hi {0}"
 msgstr "Hej %s"
 
+#: src/App.js:29
+msgid "Hi guy"
+msgstr ""
+
 #: app/scripts/components/accordion/accordion.tsx:38
 #: app/scripts/pages/auth/team/plastic-cards/plastic-card-orders/previous-orders.tsx:39
 msgid "Hide"
@@ -4856,6 +4864,14 @@ msgstr "Låt oss skapa ditt virtuella kort! Detta kort är perfekt för online-k
 msgid "Let's go"
 msgstr ""
 
+#: src/App.js:25
+msgid "Let's go kola"
+msgstr "Buffer bob kola"
+
+#: src/App.js:25
+msgid "Let's go kola_ wefwef"
+msgstr ""
+
 #: app/scripts/pages/auth/settings/accounting/csv.tsx:95
 msgid "Letter used for the verification series on which Pleo expenses\n                                    are booked."
 msgstr "Bokstav som används för verifikationsserien där utigfter i Pleo bokas."
@@ -5022,6 +5038,10 @@ msgstr "Logga in på <0>Fortnox</0>"
 #: app/scripts/components/navigation/user-dropdown.tsx:16
 msgid "Logout"
 msgstr "Logga ut"
+
+#: src/App.js:30
+msgid "Loli"
+msgstr ""
 
 #: app/scripts/components/address/address-lookup.jsx:131
 msgid "Look up a {0} postcode"
@@ -5386,6 +5406,14 @@ msgstr "Nya pengar har laddats på din Pleo wallet"
 msgid "NEW LOCALE"
 msgstr ""
 
+#: src/App.js:28
+msgid "NEW LOCALE3232"
+msgstr ""
+
+#: src/App.js:33
+msgid "NEW LOsdfsdfsdf CALE"
+msgstr ""
+
 #: app/scripts/pages/public/reset-password/reset-password.tsx:78
 msgid "New password"
 msgstr "Nytt lösenord"
@@ -5420,6 +5448,10 @@ msgstr "Nästa steg: Komplett installation"
 #: app/scripts/pages/auth/settings/settings-wizard/settings-wizard.tsx:92
 msgid "Next step: Create tags"
 msgstr "Nästa steg: Skapa taggar"
+
+#: src/App.js:52
+msgid "Next texfefeft"
+msgstr ""
 
 #: src/App.js:47
 msgid "Next text"
@@ -6410,12 +6442,12 @@ msgstr "Pleo"
 msgid "PLEO (Pleo default account)"
 msgstr "PLEO (Pleo standardkonto)"
 
-#: app/scripts/pages/auth/settings/accounting/direct.tsx:403
-msgid "Pleo Account"
-msgstr "Pleo-konto"
-
 #: app/scripts/store/accounting/actions.ts:388
 msgid "Pleo account"
+msgstr "Pleo-konto"
+
+#: app/scripts/pages/auth/settings/accounting/direct.tsx:403
+msgid "Pleo Account"
 msgstr "Pleo-konto"
 
 #: app/scripts/modals/reset-password/reset-password.tsx:61
@@ -7183,6 +7215,14 @@ msgstr "Spara"
 #: app/scripts/components/person/kyc/address-search/address-form.tsx:150
 msgid "Save address"
 msgstr "Spara adress"
+
+#: src/App.js:28
+msgid "Saved world"
+msgstr ""
+
+#: src/App.js:29
+msgid "Saved123123 world"
+msgstr "Sparad123123 världen"
 
 #: app/scripts/pages/auth/team/members/member-edit.tsx:308
 msgid "Saving...."

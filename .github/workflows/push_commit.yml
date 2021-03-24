@@ -1,0 +1,81 @@
+name: Run yarn extract-messages
+
+on: push
+
+jobs:
+  fix_errors:
+    name: Commiting
+    if: contains(github.event.commits[0].message, '-translate-')
+    env:
+      CI: "true"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug Action
+        uses: hmarr/debug-action@v1.0.0
+      - name: Setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "10.x"
+          registry-url: "https://npm.pkg.github.com"
+      - uses: navikt/github-app-token-generator@v1
+        id: gettoken
+        with:
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          app-id: ${{ secrets.APP_ID }}
+      - name: Get branch name
+        id: branch
+        run: echo "::set-output name=name::$(echo ${{github.event.ref}} | cut -c12-)"
+      - uses: actions/checkout@v2
+        with:
+          token: ${{steps.gettoken.outputs.token}}
+      - run: |
+          yarn add babel-core@^7.0.0-bridge.0 @babel/core --frozen-lockfile
+          npx lingui extract
+          git config --global user.email "igor.techweb@gmail.com"
+          git config --global user.name "Igor Dolzhenkov"
+          git add .
+          git commit -m "Messages updated -new-"
+          git push
+    #   - name: Push changes
+    #     id: commit
+    #     run: |
+    #       git config --global user.email "igor.techweb@gmail.com"
+    #       git config --global user.name "Igor Dolzhenkov"
+    #       git add .
+    #       git commit -m "Messages updated"
+    #       echo "::set-output name=sha::$(git rev-parse HEAD)"
+    #   - name: Push changes32
+    #     if: success()
+    #     uses: ad-m/github-push-action@master
+    #     with:
+    #       github_token: ${{ secrets.GITHUB_TOKEN }}
+    #       branch: ${{ steps.branch.outputs.name }}
+    #   - uses: actions/github-script@v3
+    #     with:
+    #       github-token: ${{steps.gettoken.outputs.token}}
+    #       script: |
+    #         const commitDetails = await github.git.getCommit({
+    #             owner: 'igorDolzh',
+    #             repo: "${{ github.event.repository.name }}",
+    #             commit_sha:"${{ steps.commit.outputs.sha }}",
+    #         })
+
+    #         console.log(commitDetails);
+
+    #         const newCommitDetails = await github.git.createCommit({
+    #             owner: 'igorDolzh',
+    #             repo: "${{ github.event.repository.name }}",
+    #             message: 'new commit',
+    #             tree: commitDetails.data.tree.sha,
+    #             parents: ["${{ github.event.after }}"]
+    #         })
+
+    #         console.log(newCommitDetails);
+
+    #         await github.git.updateRef({
+    #             owner: 'igorDolzh',
+    #             repo: "${{ github.event.repository.name }}",
+    #             ref: "heads/${{ steps.branch.outputs.name }}",
+    #             sha: newCommitDetails.data.sha,
+    #             force: true
+    #         })

@@ -15,14 +15,30 @@ msgstr ""
 #~ msgid "13 N23ice"
 #~ msgstr ""
 
-#: src/App.js:36
-msgid "13 Nice"
+#: src/App.js:41
+msgid "13 Nic3434e"
+msgstr ""
+
+#: src/App.js:41
+#~ msgid "13 Nice"
+#~ msgstr ""
+
+#: src/App.js:42
+msgid "14 Nice"
+msgstr ""
+
+#: src/App.js:43
+msgid "Buf3434fer 13123 zone"
 msgstr ""
 
 #~ msgid "Bufefeffer 234"
 #~ msgstr ""
 
-#: src/App.js:41
+#: src/App.js:43
+#~ msgid "Buffer 13123 zone"
+#~ msgstr ""
+
+#: src/App.js:48
 msgid "Buffer 234"
 msgstr ""
 
@@ -32,103 +48,220 @@ msgstr ""
 #~ msgid "Buffer bob"
 #~ msgstr ""
 
-#: src/App.js:42
+#: src/App.js:49
 msgid "Buffer bob kola"
 msgstr ""
 
-#: src/App.js:39
+#: src/App.js:46
 msgid "Buffer eger"
 msgstr ""
 
-#: src/App.js:37
-msgid "Buffer zone"
+#: src/App.js:39
+#~ msgid "Buffer zone"
+#~ msgstr ""
+
+#: src/App.js:44
+msgid "Buffer zone 123123 123 123 123"
 msgstr ""
 
-#: src/App.js:38
+#: src/App.js:45
 msgid "Buffer zone111"
 msgstr ""
 
-#: src/App.js:40
+#: src/App.js:47
 msgid "Buffer zongege111"
 msgstr ""
 
-#: src/App.js:79
+#: src/App.js:92
 msgid "Crazy Nic!!"
 msgstr "Szalony Nik!!"
 
-#: src/App.js:56
-msgid "Fire me"
+#: src/App.js:65
+msgid "F231ire me 1"
+msgstr ""
+
+#: src/App.js:64
+msgid "Fir123e me"
+msgstr ""
+
+#: src/App.js:60
+#~ msgid "Fire me"
+#~ msgstr ""
+
+#: src/App.js:61
+#~ msgid "Fire me 1"
+#~ msgstr ""
+
+#: src/App.js:66
+msgid "Fire me 2"
+msgstr ""
+
+#: src/App.js:67
+msgid "Fire me 23"
+msgstr ""
+
+#: src/App.js:37
+msgid "Go erfgore go"
 msgstr ""
 
 #~ msgid "Go go go"
 #~ msgstr ""
 
-#: src/App.js:34
+#: src/App.js:39
 msgid "Go go43re go"
 msgstr ""
 
-#: src/App.js:33
+#: src/App.js:38
+msgid "Go gore erfergo"
+msgstr ""
+
+#: src/App.js:36
 msgid "Go gore go"
 msgstr ""
 
-#: src/App.js:35
+#: src/App.js:40
 msgid "Go hello go"
 msgstr ""
 
-#: src/App.js:55
+#: src/App.js:63
 msgid "Google me"
 msgstr ""
 
-#: src/App.js:45
+#: src/App.js:69
+msgid "Hello"
+msgstr ""
+
+#: src/App.js:53
 msgid "Hello sir"
 msgstr ""
 
-#: src/App.js:29
-msgid "Hi guy"
+#: src/App.js:30
+#~ msgid "Hi guy"
+#~ msgstr ""
+
+#~ msgid "Hifwef guy"
+#~ msgstr ""
+
+#: src/App.js:30
+#~ msgid "Hifweffef guy"
+
+#: src/App.js:31
+msgid "Hifweffwfefef guy"
 msgstr ""
 
-#: src/App.js:54
+#: src/App.js:62
 msgid "Kiko kiko"
 msgstr ""
 
-#: src/App.js:85
+#: src/App.js:98
 msgid "Last time I had to configure webpack {0,date}"
 msgstr "Cośtam cośtam, data: {0,date}"
 
 #: src/App.js:24
-msgid "Let's go"
+#~ msgid "Let's go"
+#~ msgstr ""
+
+#: src/App.js:25
+#~ msgid "Let's go kola"
+#~ msgstr ""
+
+#: src/App.js:26
+msgid "Let's go kola_ wefwef"
+msgstr ""
+
+#: src/App.js:24
+msgid "Let's sdfgo"
+msgstr ""
+
+#: src/App.js:25
+#~ msgid "Let's sdfgo hello"
+#~ msgstr ""
+
+#: src/App.js:25
+#~ msgid "Let's sdfgo hello sds df"
+#~ msgstr ""
+
+#: src/App.js:25
+msgid "Let's sdfgo hello sds df {count}"
 msgstr ""
 
 #~ msgid "Letefe's go"
 #~ msgstr ""
 
-#: src/App.js:30
-msgid "Loli"
+#: src/App.js:31
+#~ msgid "Loli"
+#~ msgstr ""
+
+#: src/App.js:32
+msgid "Lolicdcpwfwefwefe"
 msgstr ""
 
 #~ msgid "Make nefeo push"
 #~ msgstr ""
 
-#: src/App.js:26
-msgid "Make no push"
+#: src/App.js:27
+#~ msgid "Make no push"
+#~ msgstr ""
+
+#: src/App.js:28
+msgid "Make nosds push"
 msgstr ""
 
-#: src/App.js:27
-#: src/App.js:31
-msgid "NEW LOCALE"
+#: src/App.js:32
+#~ msgid "NEW LOCALE"
+#~ msgstr ""
+
+#: src/App.js:28
+#~ msgid "NEW LOCALE3232"
+#~ msgstr ""
+
+#: src/App.js:33
+msgid "NEW LOCALEsd fsdf"
+msgstr ""
+
+#: src/App.js:34
+msgid "NEW LOsdfsdfsdf CALE"
+msgstr ""
+
+#: src/App.js:28
+#~ msgid "NEW LdsdsdsdsgfsdfOCALE3232"
+#~ msgstr ""
+
+#: src/App.js:28
+#~ msgid "NEW LdsdsdsdsgfsdffdfsfOCALE3232"
+#~ msgstr ""
+
+#: src/App.js:28
+#~ msgid "NEW LdsdsdsdsgfsdffdfsffsfdsOCALE3232"
+#~ msgstr ""
+
+#: src/App.js:29
+msgid "NEW LdsdsdsdsgfsdffdfsffsfdsfdfdfsdsdsafsdfsfOCALE3232"
 msgstr ""
 
 #: src/App.js:23
-msgid "New ride"
+#~ msgid "New ride"
+#~ msgstr ""
+
+#: src/App.js:23
+#~ msgid "New ride wsdf weerf"
+#~ msgstr ""
+
+#: src/App.js:23
+msgid "New ride wsdf weerf {count}"
 msgstr ""
 
-#: src/App.js:48
+#: src/App.js:56
 msgid "New text"
 msgstr ""
 
-#: src/App.js:51
-msgid "Next text"
+#: src/App.js:59
+msgid "Next texfefeft"
 msgstr ""
+
+#: src/App.js:52
+#~ msgid "Next text"
+#~ msgstr ""
 
 #: src/App.js:24
 #~ msgid "Nice push"
@@ -137,7 +270,7 @@ msgstr ""
 #~ msgid "Okey 343Google"
 #~ msgstr ""
 
-#: src/App.js:32
+#: src/App.js:35
 msgid "Okey Gffdoogle"
 msgstr ""
 
@@ -148,11 +281,11 @@ msgstr ""
 #~ msgid "Saved world"
 #~ msgstr ""
 
-#: src/App.js:28
+#: src/App.js:30
 msgid "Saved123123 world"
 msgstr ""
 
-#: src/App.js:53
+#: src/App.js:61
 msgid "This hikolp 12312"
 msgstr ""
 
@@ -164,18 +297,26 @@ msgstr "Ta wiadomość jest przetłumaczona i ma <0>odnośnik</0>"
 msgid "This message will fallback to {fallbackLang} / {count}!"
 msgstr ""
 
-#: src/App.js:52
+#: src/App.js:60
 msgid "This time it should work now go kola"
 msgstr "Tym razem powinno działać teraz przejdź do kola"
 
-#: src/App.js:25
+#: src/App.js:50
+msgid "Wow, not bad at all"
+msgstr ""
+
+#: src/App.js:27
 msgid "Wow, what push"
+msgstr ""
+
+#: src/App.js:68
+msgid "Yor"
 msgstr ""
 
 #: src/App.js:20
 msgid "my.custom.id"
 msgstr "Działa..."
 
-#: src/App.js:59
+#: src/App.js:72
 msgid "{count, plural, =0 {There're no messages} one {There's # message in your inbox} other {There're # messages in your inbox}}"
 msgstr "{count, plural, =0 {Nie masz wiadomości} one {Jest tylko jedna wiadomość} few {Masz # wiadomości} many {Masz # wiadomości}}"

@@ -20,26 +20,34 @@ const App = () => {
         <Trans id="my.custom.id">Custom ID works</Trans>
       </h1>
       <h1>
-        <Trans>New ride</Trans>
-        <Trans>Let's go</Trans>
+        <Trans>New ride wsdf weerf {count}</Trans>
+        <Trans>Let's sdfgo</Trans>
+        <Trans>Let's sdfgo hello sds df {count}</Trans>
+        <Trans>Let's go kola_ wefwef</Trans>
         <Trans>Wow, what push</Trans>
-        <Trans>Make no push</Trans>
-        <Trans>NEW LOCALE</Trans>
+        <Trans>Make nosds push</Trans>
+        <Trans>NEW LdsdsdsdsgfsdffdfsffsfdsfdfdfsdsdsafsdfsfOCALE3232</Trans>
         <Trans>Saved123123 world</Trans>
-        <Trans>Hi guy</Trans>
-        <Trans>Loli</Trans>
-        <Trans>NEW LOCALE</Trans>
+        <Trans>Hifweffwfefef guy</Trans>
+        <Trans>Lolicdcpwfwefwefe</Trans>
+        <Trans>NEW LOCALEsd fsdf</Trans>
+        <Trans>NEW LOsdfsdfsdf CALE</Trans>
         <Trans>Okey Gffdoogle</Trans>
         <Trans>Go gore go</Trans>
+        <Trans>Go erfgore go</Trans>
+        <Trans>Go gore erfergo</Trans>
         <Trans>Go go43re go</Trans>
         <Trans>Go hello go</Trans>
-        <Trans>13 Nice</Trans>
-        <Trans>Buffer zone</Trans>
+        <Trans>13 Nic3434e</Trans>
+        <Trans>14 Nice</Trans>
+        <Trans>Buf3434fer 13123 zone</Trans>
+        <Trans>Buffer zone 123123 123 123 123 </Trans>
         <Trans>Buffer zone111</Trans>
         <Trans>Buffer eger</Trans>
         <Trans>Buffer zongege111</Trans>
         <Trans>Buffer 234</Trans>
         <Trans>Buffer bob kola</Trans>
+        <Trans>Wow, not bad at all</Trans>
       </h1>
       <h1>
         <Trans>Hello sir</Trans>
@@ -48,12 +56,17 @@ const App = () => {
         <Trans>New text</Trans>
       </h1>
       <h1>
-        <Trans>Next text</Trans>
+        <Trans>Next texfefeft</Trans>
         <Trans>This time it should work now go kola</Trans>
         <Trans>This hikolp 12312</Trans>
         <Trans>Kiko kiko</Trans>
         <Trans>Google me</Trans>
-        <Trans>Fire me</Trans>
+        <Trans>Fir123e me</Trans>
+        <Trans>F231ire me 1</Trans>
+        <Trans>Fire me 2</Trans>
+        <Trans>Fire me 23</Trans>
+        <Trans>Yor</Trans>
+        <Trans>Hello</Trans>
       </h1>
       <p>
         <Plural
