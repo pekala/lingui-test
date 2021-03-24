@@ -34,6 +34,8 @@ const App = () => {
         <Trans>NEW LOsdfsdfsdf CALE</Trans>
         <Trans>Okey Gffdoogle</Trans>
         <Trans>Go gore go</Trans>
+        <Trans>Go erfgore go</Trans>
+        <Trans>Go gore erfergo</Trans>
         <Trans>Go go43re go</Trans>
         <Trans>Go hello go</Trans>
         <Trans>13 Nice</Trans>
