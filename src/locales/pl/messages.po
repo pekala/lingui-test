@@ -16,19 +16,27 @@ msgstr ""
 #~ msgstr ""
 
 #: src/App.js:41
-msgid "13 Nice"
+msgid "13 Nic3434e"
 msgstr ""
+
+#: src/App.js:41
+#~ msgid "13 Nice"
+#~ msgstr ""
 
 #: src/App.js:42
 msgid "14 Nice"
+msgstr ""
+
+#: src/App.js:43
+msgid "Buf3434fer 13123 zone"
 msgstr ""
 
 #~ msgid "Bufefeffer 234"
 #~ msgstr ""
 
 #: src/App.js:43
-msgid "Buffer 13123 zone"
-msgstr ""
+#~ msgid "Buffer 13123 zone"
+#~ msgstr ""
 
 #: src/App.js:48
 msgid "Buffer 234"

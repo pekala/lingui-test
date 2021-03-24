@@ -17,8 +17,12 @@ msgstr ""
 #~ msgstr "10 N223423434234ice"
 
 #: src/App.js:41
-msgid "13 Nice"
-msgstr "13 Nice"
+msgid "13 Nic3434e"
+msgstr "13 Nic3434e"
+
+#: src/App.js:41
+#~ msgid "13 Nice"
+#~ msgstr "13 Nice"
 
 #~ msgid "13 Niw434343efwce"
 #~ msgstr "13 Nice"
@@ -43,8 +47,12 @@ msgstr "14 Nice"
 #~ msgstr "13 23423423423423345345232342234243443234234234234"
 
 #: src/App.js:43
-msgid "Buffer 13123 zone"
-msgstr "Buffer 13123 zone"
+msgid "Buf3434fer 13123 zone"
+msgstr "Buf3434fer 13123 zone"
+
+#: src/App.js:43
+#~ msgid "Buffer 13123 zone"
+#~ msgstr "Buffer 13123 zone"
 
 #: src/App.js:48
 msgid "Buffer 234"
