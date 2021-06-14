@@ -270,8 +270,12 @@ msgstr "Next texfefeft"
 #~ msgstr "Nice push"
 
 #: src/App.js:35
-msgid "Okey Gffdoogle"
-msgstr "Okey Gffdoogle"
+msgid "Okergergey Gffdoogle"
+msgstr "Okergergey Gffdoogle"
+
+#: src/App.js:35
+#~ msgid "Okey Gffdoogle"
+#~ msgstr "Okey Gffdoogle"
 
 #: src/App.js:28
 #~ msgid "Saved world"
