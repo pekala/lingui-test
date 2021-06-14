@@ -12,6 +12,8 @@ jobs:
         id: comment-branch
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Debug Action
+        uses: hmarr/debug-action@v1.0.0
       - uses: actions/checkout@v2
         if: success()
         with:
@@ -22,12 +24,16 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
       # This will echo "Your PR is 7", or be skipped if there is no current PR.
-      - run: echo "Your PR is ${PR}"
-        if: success() && steps.findPr.outputs.number
-        env:
-          PR: ${{ steps.findPr.outputs.pr }}
+      - run: echo "Your PR is ${{ github.event.issue.title }} ${{ github.event.issue.body }}"
+      - name: Get short SHA
+        id: comment
+        run: echo "::set-output name=tagname::$(echo ${{github.event.comment.body}} | cut -c16-)"
+      # - run: echo "Your PR is ${PR}"
+      #   if: success() && steps.findPr.outputs.number
+      #   env:
+      #     PR: ${{ steps.findPr.outputs.pr }}
       - name: Lokalise File Push
-        uses: pleo-io/actions/lokalise-file-push@v5
+        uses: pleo-io/actions/lokalise-file-push@v6.0
         with:
           # Api token for the Lokalise account
           # with read/write access to the project
@@ -39,6 +45,40 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          tag: pre-release
+          tags: '["pre-release", "${{ steps.comment.outputs.tagname }}"]'
 
           locales: '["en", "da"]'
+      - name: Lokalise create task
+        uses: pleo-io/actions/lokalise-create-task@v6.0
+        with:
+          # Api token for the Lokalise account
+          # with read/write access to the project
+          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+          # ID of the project to sync
+          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+          # Tags
+          tags: '["${{ steps.comment.outputs.tagname }}"]'
+
+          # Name of team from localise
+          team-name: Pleo Team
+
+          # List of email for task assignee
+          assignee-email-list: '{
+            "en": ["igor@pleo.io"],
+            "fr": ["igor@pleo.io"],
+            "de": ["igor@pleo.io"],
+            "es": ["igor@pleo.io"],
+            "sv": ["igor@pleo.io"],
+            "da": ["igor@pleo.io"]
+          }'
+
+          # Task title
+          task-title: ${{ github.event.issue.title }}
+
+          # Task description
+          task-description: ${{ github.event.issue.body }}
+
+          # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
+          task-options: '{"auto_close_task": true, "auto_close_languages": true}'
