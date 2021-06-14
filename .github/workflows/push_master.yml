@@ -1,0 +1,71 @@
+on:
+  push:
+    branches:
+      - master
+
+name: Localise
+jobs:
+    create-task:
+      name: Push new messages and create tasks on merging to master
+      runs-on: ubuntu-18.04
+      steps:
+        - uses: actions/checkout@v2.3.4
+          if: success()
+          with:
+            ref: ${{ steps.comment-branch.outputs.ref }}
+
+        - name: Get short SHA8
+          id: tag
+          run: echo "::set-output name=tagname::$(echo ${{github.event.after}} | cut -c1-8)"
+
+        - name: Lokalise file push
+          id: lokalise_push
+          uses: pleo-io/actions/lokalise-file-push@v9.2
+          with:
+            # Api token for the Lokalise account
+            # with read/write access to the project
+            api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+            # ID of the project to sync
+            project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+            # The relative file path where language files will be found
+            file-path: app/locales/%LANG_ISO%/messages.po
+
+            tags: '["sha-${{ steps.tag.outputs.tagname }}"]'
+
+            locales: '["en"]'
+
+        - name: Lokalise create task
+          uses: pleo-io/actions/lokalise-create-task@v9.2
+          with:
+            # Api token for the Lokalise account
+            # with read/write access to the project
+            api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+            # ID of the project to sync
+            project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+            # Tags
+            tags: '["sha-${{ steps.tag.outputs.tagname }}"]'
+
+            # Name of team from localise
+            team-name: Pleo Team
+
+            # List of email for task assignee
+            assignee-email-list: '{
+              "fr": ["bjorn@pleo.io"],
+              "de": ["bjorn@pleo.io", "desiree@pleo.io"],
+              "es": ["bjorn@pleo.io", "haizea@pleo.io", "alejandro@pleo.io"],
+              "sv": ["bjorn@pleo.io", "josephine@pleo.io"],
+              "da": ["bjorn@pleo.io", "natascha@pleo.io"]
+            }'
+
+            # Task title
+            task-title: '${{ github.event.head_commit.message }}'
+
+            # Task description
+            task-description: 'This is automatic task on merge. All the questions about new tokens to ${{ github.event.head_commit.author.name }} (${{ github.event.head_commit.author.username }})'
+
+            # Task options for https://app.lokalise.com/api2docs/curl/#transition-create-a-task-post
+            task-options: '{"auto_close_task": true, "auto_close_languages": true}'

@@ -1,9 +1,6 @@
 on:
   pull_request:
     types: [synchronize, labeled]
-  push:
-    branches:
-      - master
 name: Push transl1231ations
 jobs:
   merge:
