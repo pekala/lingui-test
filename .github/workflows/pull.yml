@@ -27,4 +27,6 @@ jobs:
         env:
           SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
         run: |
-          git diff
+          git add .
+          git commit -m "Merge with master: message extraction"
+          git push
