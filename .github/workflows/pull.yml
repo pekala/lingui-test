@@ -22,7 +22,7 @@ jobs:
           # The relative file path where language files will be found
           file-path: src/locales/%LANG_ISO%/messages.po
 
-          download-options: '{"export_empty_as": "skip"}'
+          download-options: '{"export_empty_as": "skip", "format": "po"}'
       - name: Commiting messages
         env:
           SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
