@@ -1,0 +1,25 @@
+on:
+  issue_comment:
+    types: [created]
+name: Push translations
+jobs:
+  merge:
+    name: Push translations
+    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/pull-messages')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Lokalise Pull Messages
+        uses: igorDolzh/lokalise-pull-messages@v0.0.1
+        with:
+          # Api token for the Lokalise account
+          # with read/write access to the project
+          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+
+          # ID of the project to sync
+          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+
+          # The relative file path where language files will be found
+          file-path: src/locales/%LANG_ISO%/messages.po
+
+          download-options: '{"export_empty_as": "skip"}'
