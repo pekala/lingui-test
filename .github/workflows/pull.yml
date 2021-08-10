@@ -1,14 +1,14 @@
 on:
   issue_comment:
     types: [created]
-name: Push translations
+name: Pull messages
 jobs:
   merge:
-    name: Push translations
+    name: Pull messages
     if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/pull-messages')
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
       - name: Lokalise Pull Messages
         uses: igorDolzh/lokalise-pull-messages@v0.0.1
         with:
@@ -23,3 +23,8 @@ jobs:
           file-path: src/locales/%LANG_ISO%/messages.po
 
           download-options: '{"export_empty_as": "skip"}'
+      - name: Commiting messages
+        env:
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+        run: |
+          git diff
