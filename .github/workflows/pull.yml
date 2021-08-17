@@ -1,34 +1,47 @@
 on:
-  issue_comment:
-    types: [created]
-name: Pull messages
+  pull_request:
+    types: [labeled]
+
+name: Pull translations
 jobs:
-  merge:
-    name: Pull messages
-    if: github.event.issue.pull_request != '' && contains(github.event.comment.body, '/pull-messages')
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Lokalise Pull Messages
-        uses: igorDolzh/localise-pull-messages@v0.0.10
-        with:
-          # Api token for the Lokalise account
-          # with read/write access to the project
-          api-token: ${{ secrets.LOCALIZE_TOKEN }}
+    create-task:
+      name: Pull translations
+      runs-on: ubuntu-latest
+      steps:
+        - uses: navikt/github-app-token-generator@v1
+          if: (github.event.label && github.event.label.name == 'pull-translations')
+          id: gettoken
+          with:
+            private-key: ${{ secrets.GH_DEPLOY_APP_PRIVATE_KEY }}
+            app-id: 56219
 
-          # ID of the project to sync
-          project-id: ${{ secrets.LOCALIZE_PROJECT }}
+        - name: Lokalise file pull
+          id: lokalise_pull
+          if: (github.event.label && github.event.label.name == 'pull-translations')
+          uses: pleo-io/actions/lokalise-file-pull@v10.0.0
+          with:
+            # Api token for the Lokalise account
+            # with read/write access to the project
+            api-token: ${{ secrets.LOCALIZE_TOKEN }}
 
-          # The relative file path where language files will be found
-          file-path: src/locales/%LANG_ISO%/messages.po
+            # ID of the project to sync
+            project-id: ${{ secrets.LOCALIZE_PROJECT }}
 
-          download-options: '{"export_empty_as": "skip", "format": "po"}'
-      - name: Commiting messages
-        env:
-          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
-        run: |
-          git config --global user.email "dev@pleo.io"
-          git config --global user.name "Dev bot"
-          git add .
-          git commit -m "Merge with master: message extraction"
-          git push
+            # The relative file path where language files will be found
+            file-path: src/translations/%LANG_ISO%.json
+
+            # Download options for https://app.lokalise.com/api2docs/curl/#transition-download-files-post
+            download-options: '{"export_empty_as": 'skip'}'
+
+        - uses: actions/checkout@v2
+          if: (github.event.label && github.event.label.name == 'pull-translations')
+          with:
+            token: ${{steps.gettoken.outputs.token}}
+        - run: |
+            git config --global user.name "dev@pleo.io"
+            git config --global user.name "translation-bot"
+            git add .
+            git commit -m "Automated pulled translations"
+            git push
+
+
