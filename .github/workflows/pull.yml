@@ -28,7 +28,7 @@ jobs:
             project-id: ${{ secrets.LOCALIZE_PROJECT }}
 
             # The relative file path where language files will be found
-            file-path: src/translations/%LANG_ISO%.json
+            file-path: src/locales/%LANG_ISO%/messages.po
 
             # Download options for https://app.lokalise.com/api2docs/curl/#transition-download-files-post
             download-options: '{"export_empty_as": 'skip'}'
